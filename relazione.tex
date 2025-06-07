@@ -1,0 +1,92 @@
+\documentclass[a4paper,12pt]{article}
+
+% Pacchetti necessari
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[italian]{babel}
+\usepackage{geometry}
+\usepackage{eso-pic} % Per aggiungere il logo come sfondo
+\usepackage{transparent} % Per gestire la trasparenza
+\usepackage[hyperindex, bookmarks=true, colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
+
+% Margini della pagina
+\geometry{a4paper, margin=2.5cm}
+
+% Inserimento logo in bianco e nero con opacità
+\newcommand\BackgroundLogo{
+    \AddToShipoutPictureBG{
+        \AtPageLowerLeft{
+            \hspace{-3cm}
+            \vspace{-4cm}
+            \transparent{0.08}
+            \includegraphics[width=12cm, keepaspectratio]{logo-universita-bn.png}
+        }
+    }
+}
+
+% Comando per abilitare il logo trasparente
+\BackgroundLogo
+
+\begin{document}
+
+% Titolo del documento
+\begin{titlepage}
+    \centering
+
+    \begin{tabular}{@{}c@{\hspace{0.5cm}}c@{}}
+        \raisebox{-.5\height}{\includegraphics[width=4cm]{_assets/logo-universita.png}} & 
+        \raisebox{-.5\height}{\includegraphics[width=4cm]{_assets/logo-dipartimento.png}} \\
+    \end{tabular}\\[1cm]
+    
+    {\LARGE Università degli Studi di Salerno}\\[0.5cm]
+    {\Large Dipartimento di Ingegneria dell'Informazione ed Elettrica e Matematica Applicata (DIEM)}\\[2cm]
+    {\Huge \textbf{Relazione di progetto}}\\[0.4cm]
+    {\Large \textbf{Sviluppo di un modello di regressione lineare su dataset}}\\[1cm]
+    {\Large Corso di Statistica Applicata - A.A. 2024/25}\\[2cm]
+    \begin{flushright}
+        \textbf{Studenti Gruppo 16:}\\[0.2cm]
+        Corrado Giachetta \\
+        Matricola: 0612708054 \\
+        Francesco Peluso \\
+        Matricola: 0612707469 \\[0.2cm]
+        Gerardo Selce \\
+        Matricola: 0612707692 \\[0.2cm]
+        Anuar Zouhri \\
+        Matricola: 0612707505 \\[0.2cm]
+        \vspace{1cm}
+        \textbf{Docenti:}\\
+        Prof. Fabio Postiglione \\ Prof. Paolo Addesso 
+    \end{flushright}
+    \vfill
+    Last update: {\large \today}
+\end{titlepage}
+
+% Indice
+\tableofcontents
+\newpage
+
+% Includi l'abstract
+\section*{Abstract}
+\input{sections/abstract}
+
+% Includi l'elicitazione dei requisiti
+\section{Elicitazione dei requisiti}
+\input{sections/elicitazione}
+
+% Includi i requisiti
+\clearpage
+\section{Requisiti e vincoli di progetto}
+\input{sections/requisiti}
+
+% Includi la categorizzazione di dettaglio
+\clearpage
+\section{Categorizzazione di dettaglio}
+
+% Includi la priorità dei requisiti
+\clearpage
+\section{Priorità dei requisiti}
+
+% Altri contenuti del documento...
+
+\end{document}

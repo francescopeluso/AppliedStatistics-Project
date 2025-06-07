@@ -1,0 +1,27 @@
+# ------------------------------------------------------------------------------
+# Progetto finale del corso di Statistica Applicata - A.A. 2024/25
+# Gruppo #5 - Corrado Giachetta, Francesco Peluso, Gerardo Selce, Anuar Zouhri
+#
+# Università degli Studi di Salerno - DIEM
+# Dipartimento di Ingegneria dell'Informazione, Elettrica e Matematica Applicata
+# ------------------------------------------------------------------------------
+
+# Impostazione path cartella progetto (N.B. cambia a seconda di chi usa il file)
+setwd('~/GitHub Repos/AppliedStatistics-Project')     # path Francesco
+#setwd('')     # path Corrado
+#setwd('')     # path Anuar
+#setwd('')     # path Gerardo
+
+# ------------------------------------------------------------------------------
+
+# Lettura del dataset da file CSV
+data = read.csv('./dataset.csv');
+
+# Scatterplot delle correlazioni tra le coppie di variabili
+plot(data);
+
+lin_mod_all=lm(y_VideoQuality ~ ., data=data)
+summary(lin_mod_all)
+
+step_lin=step(lin_mod_all, trace = 1, data=data)
+summary(step_lin)

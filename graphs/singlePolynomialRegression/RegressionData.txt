@@ -14,3 +14,133 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 Residual standard error: 24.36 on 98 degrees of freedom
 Multiple R-squared:  0.1789,	Adjusted R-squared:  0.1705 
 F-statistic: 21.35 on 1 and 98 DF,  p-value: 1.166e-05
+
+----------------------------------------------------------------------
+
+------------------x2_FRatio-------------------------------------------
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-64.262 -13.705   4.149  18.169  33.603 
+
+Coefficients:
+               Estimate Std. Error t value Pr(>|t|)    
+(Intercept)      67.302      2.198  30.619  < 2e-16 ***
+data$x2_FRatio  -14.723      2.091  -7.042 2.63e-10 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 21.9 on 98 degrees of freedom
+Multiple R-squared:  0.336,	Adjusted R-squared:  0.3293 
+F-statistic:  49.6 on 1 and 98 DF,  p-value: 2.625e-10
+
+--------------------------------------------------------------------
+
+------------------x3_TIME-------------------------------------------
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-68.274 -14.804   2.669  18.971  41.707 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    68.746      2.627  26.171   <2e-16 ***
+data$x3_TIME    5.558      2.572   2.161   0.0331 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 26.26 on 98 degrees of freedom
+Multiple R-squared:  0.04548,	Adjusted R-squared:  0.03574 
+F-statistic:  4.67 on 1 and 98 DF,  p-value: 0.03314
+
+--------------------------------------------------------------------
+
+------------------x4_MP-------------------------------------------
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-75.961 -12.567   2.591  19.519  42.544 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   68.168      2.624  25.977   <2e-16 ***
+data$x4_MP    -6.154      2.658  -2.315   0.0227 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 26.17 on 98 degrees of freedom
+Multiple R-squared:  0.05184,	Adjusted R-squared:  0.04217 
+F-statistic: 5.358 on 1 and 98 DF,  p-value: 0.02271
+
+--------------------------------------------------------------------
+
+------------------x5_CROP-------------------------------------------
+
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-53.46 -16.18   4.87  16.47  43.14 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    66.393      2.279  29.135  < 2e-16 ***
+data$x5_CROP  -14.233      2.209  -6.443 4.39e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 22.53 on 98 degrees of freedom
+Multiple R-squared:  0.2976,	Adjusted R-squared:  0.2904 
+F-statistic: 41.51 on 1 and 98 DF,  p-value: 4.393e-09
+
+--------------------------------------------------------------------
+
+------------------x6_FOCAL-------------------------------------------
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-68.799 -16.325   4.152  19.142  41.302 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    68.6033     2.6908  25.496   <2e-16 ***
+data$x6_FOCAL  -0.1099     2.8718  -0.038     0.97    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 26.88 on 98 degrees of freedom
+Multiple R-squared:  1.494e-05,	Adjusted R-squared:  -0.01019 
+F-statistic: 0.001464 on 1 and 98 DF,  p-value: 0.9696
+
+--------------------------------------------------------------------
+
+------------------x7_FOCAL-------------------------------------------
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-73.985 -14.532   4.038  18.312  44.127 
+
+Coefficients:
+                   Estimate Std. Error t value Pr(>|t|)    
+(Intercept)          68.608      2.645  25.937   <2e-16 ***
+data$x7_PixDensity   -4.744      2.659  -1.784   0.0775 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 26.45 on 98 degrees of freedom
+Multiple R-squared:  0.03147,	Adjusted R-squared:  0.02158 
+F-statistic: 3.184 on 1 and 98 DF,  p-value: 0.07746
+
+
+--------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+

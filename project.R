@@ -47,10 +47,53 @@ boxplot(data[, !(names(data) %in% "y_VideoQuality")])
 
 #Valutazione della relazione tra y_VideoQuality e le varibili xi
 
+#x1_ISO
 dev.new()
 plot(data$x1_ISO,data$y_VideoQuality,xlab="x1_ISO",ylab = 'y_VideoQuality')
 fit1 = lm(data$y_VideoQuality~data$x1_ISO,data=data)
 abline(fit1, col="red",lw=2)
 summary(fit1)
+
+#x2_FRatio
+dev.new()
+plot(data$x2_FRatio,data$y_VideoQuality,xlab="x2_FRatio",ylab = 'y_VideoQuality')
+fit2 = lm(data$y_VideoQuality~data$x2_FRatio,data=data)
+abline(fit2, col="red",lw=2)
+summary(fit2)
+
+#x3_TIME
+dev.new()
+plot(data$x3_TIME,data$y_VideoQuality,xlab="x3_TIME",ylab = 'y_VideoQuality')
+fit3 = lm(data$y_VideoQuality~data$x3_TIME,data=data)
+abline(fit3, col="red",lw=2)
+summary(fit3)
+
+#x4_MP
+dev.new()
+plot(data$x4_MP,data$y_VideoQuality,xlab="x4_MP",ylab = 'y_VideoQuality')
+fit4 = lm(data$y_VideoQuality~data$x4_MP,data=data)
+abline(fit4, col="red",lw=2)
+summary(fit4)
+
+#x5_CROP
+dev.new()
+plot(data$x5_CROP,data$y_VideoQuality,xlab="x5_CROP",ylab = 'y_VideoQuality')
+fit5 = lm(data$y_VideoQuality~data$x5_CROP,data=data)
+abline(fit5, col="red",lw=2)
+summary(fit5)
+
+#x6_FOCAL
+dev.new()
+plot(data$x6_FOCAL,data$y_VideoQuality,xlab="x1_ISO",ylab = 'y_VideoQuality')
+fit6 = lm(data$y_VideoQuality~data$x6_FOCAL,data=data)
+abline(fit6, col="red",lw=2)
+summary(fit6)
+
+#x7_PixDensity
+dev.new()
+plot(data$x7_PixDensity,data$y_VideoQuality,xlab="x1_ISO",ylab = 'y_VideoQuality')
+fit6 = lm(data$y_VideoQuality~data$x7_PixDensity,data=data)
+abline(fit6, col="red",lw=2)
+summary(fit6)
 
 

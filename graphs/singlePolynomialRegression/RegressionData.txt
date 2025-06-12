@@ -1,0 +1,16 @@
+------------------x1_ISO-------------------------------------------
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-55.551 -15.975  -0.306  18.799  40.115 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   69.062      2.438  28.332  < 2e-16 ***
+data$x1_ISO  -11.983      2.593  -4.621 1.17e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 24.36 on 98 degrees of freedom
+Multiple R-squared:  0.1789,	Adjusted R-squared:  0.1705 
+F-statistic: 21.35 on 1 and 98 DF,  p-value: 1.166e-05

@@ -28,7 +28,11 @@ plot(data);
 library(ggplot2)
 library("GGally")
 
-ggpairs(data)
+ggpairs(data, upper = list(continuous = "blank"))   # nasconde i grafici sotto la diagonale
+
+# Basic Scatterplot Matrix
+pairs(~,data=mtcars,
+      main="Simple Scatterplot Matrix")
 
 library("corrplot")
 corrplot.mixed(cor(data),number.cex=0.8,tl.cex=0.8)
@@ -43,6 +47,10 @@ median(data$y_VideoQuality) #analisi mediana
 mean(data$y_VideoQuality) #analisi media
 quantile(data$y_VideoQuality,probs=c(0.25,0.50,0.75)) #analisi quantili
 boxplot(data[, !(names(data) %in% "y_VideoQuality")])
+
+#Istogrammi
+hist(data$y_VideoQuality,main="Distribuzione di y_VideoQuality", xlab="y_VideoQuality")
+
 #-------------------------------------------------------------
 
 #Valutazione della relazione tra y_VideoQuality e le varibili xi
@@ -54,7 +62,7 @@ fit1 = lm(data$y_VideoQuality~data$x1_ISO,data=data)
 abline(fit1, col="red",lw=2)
 summary(fit1)
 
-<<<<<<< HEAD
+
 #x2_FRatio
 dev.new()
 plot(data$x2_FRatio,data$y_VideoQuality,xlab="x2_FRatio",ylab = 'y_VideoQuality')
@@ -85,24 +93,16 @@ summary(fit5)
 
 #x6_FOCAL
 dev.new()
-plot(data$x6_FOCAL,data$y_VideoQuality,xlab="x1_ISO",ylab = 'y_VideoQuality')
+plot(data$x6_FOCAL,data$y_VideoQuality,xlab="x6_FOCAL",ylab = 'y_VideoQuality')
 fit6 = lm(data$y_VideoQuality~data$x6_FOCAL,data=data)
 abline(fit6, col="red",lw=2)
 summary(fit6)
 
 #x7_PixDensity
 dev.new()
-plot(data$x7_PixDensity,data$y_VideoQuality,xlab="x1_ISO",ylab = 'y_VideoQuality')
+plot(data$x7_PixDensity,data$y_VideoQuality,xlab="x7_PixDensity",ylab = 'y_VideoQuality')
 fit6 = lm(data$y_VideoQuality~data$x7_PixDensity,data=data)
 abline(fit6, col="red",lw=2)
 summary(fit6)
-=======
-dev.new()
-plot(data$x5_CROP, data$y_VideoQuality,xlab="x",ylab="y");
-fit5= lm(data$y_VideoQuality~data$x5_CROP, data=data)
-abline(fit5, col="red", lw=2)
-summary(fit5) #summary(fit1)$r.squared
-
->>>>>>> 6d8a99264d314cf9aac525fe4dab18072683ac0e
 
 

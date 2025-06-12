@@ -13,10 +13,15 @@ setwd('C:/Users/anuar/AppliedStatistics-Project')     # path Corrado
 #setwd('')     # path Gerardo
 
 # ------------------------------------------------------------------------------
+#package da scaricare 
+install.packages("GGally")
 
 # Lettura del dataset da file CSV
 data = read.csv('./dataset.csv');
 
+#------------------------------------------------
+#STATISTICA DESCRITTIVA
+#
 # Scatterplot delle correlazioni tra le coppie di variabili
 plot(data);
 
@@ -33,3 +38,17 @@ summary(lin_mod_all)
 
 step_lin=step(lin_mod_all, trace = 1, data=data)
 summary(step_lin)
+
+median(data$y_VideoQuality) #analisi mediana
+mean(data$y_VideoQuality) #analisi media
+quantile(data$y_VideoQuality,probs=c(0.25,0.50,0.75)) #analisi quantili
+boxplot(data[, !(names(data) %in% "y_VideoQuality")])
+#-------------------------------------------------------------
+
+#Valutazione della relazione tra y_VideoQuality e le varibili xi
+
+dev.new()
+plot(data$y_VideoQuality,data$x1_ISO,xlab=)
+
+
+

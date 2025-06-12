@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.7)  7 JUN 2025 15:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.7)  12 JUN 2025 16:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -262,44 +262,64 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip50
 )
+(D:\MIK\tex/latex/subfigure\subfigure.sty
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip51
+\subfigcapskip=\skip52
+\subfigcaptopadj=\dimen158
+\subfigbottomskip=\skip53
+\subfigcapmargin=\dimen159
+\subfiglabelskip=\skip54
+\c@subfigure=\count281
+\c@lofdepth=\count282
+\c@subtable=\count283
+\c@lotdepth=\count284
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(D:\MIK\tex/latex/subfigure\subfigure.cfg)
+\subfig@top=\skip55
+\subfig@bottom=\skip56
+)
 (D:\MIK\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count281
+\l__color_backend_stack_int=\count285
 \l__pdf_internal_box=\box51
 ) (relazione.aux)
 \openout1 = `relazione.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
 
 (D:\MIK\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count282
-\scratchdimen=\dimen158
+\scratchcounter=\count286
+\scratchdimen=\dimen160
 \scratchbox=\box52
-\nofMPsegments=\count283
-\nofMParguments=\count284
+\nofMPsegments=\count287
+\nofMParguments=\count288
 \everyMPshowfont=\toks21
-\MPscratchCnt=\count285
-\MPscratchDim=\dimen159
-\MPnumerator=\count286
-\makeMPintoPDFobject=\count287
+\MPscratchCnt=\count289
+\MPscratchDim=\dimen161
+\MPnumerator=\count290
+\makeMPintoPDFobject=\count291
 \everyMPtoPDFconversion=\toks22
 ) (D:\MIK\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -309,8 +329,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (D:\MIK\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \it@ocap on input line 31.
-LaTeX Info: Redefining \it@ccap on input line 31.
+LaTeX Info: Redefining \it@ocap on input line 33.
+LaTeX Info: Redefining \it@ccap on input line 33.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -346,31 +366,31 @@ LaTeX Info: Redefining \it@ccap on input line 31.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 31.
+Package hyperref Info: Link coloring ON on input line 33.
 (relazione.out) (relazione.out)
 \@outlinefile=\write3
 \openout3 = `relazione.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 37.
+(Font)              <12> on input line 39.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 37.
+(Font)              <8> on input line 39.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 37.
-<_assets/logo-universita.png, id=3, 351.3125pt x 351.3125pt>
+(Font)              <6> on input line 39.
+<_assets/logo-universita.png, id=19, 351.3125pt x 351.3125pt>
 File: _assets/logo-universita.png Graphic file (type png)
 <use _assets/logo-universita.png>
-Package pdftex.def Info: _assets/logo-universita.png  used on input line 38.
+Package pdftex.def Info: _assets/logo-universita.png  used on input line 40.
 (pdftex.def)             Requested size: 113.81102pt x 113.81068pt.
-<_assets/logo-dipartimento.png, id=5, 205.76875pt x 81.30376pt>
+<_assets/logo-dipartimento.png, id=21, 205.76875pt x 81.30376pt>
 File: _assets/logo-dipartimento.png Graphic file (type png)
 <use _assets/logo-dipartimento.png>
-Package pdftex.def Info: _assets/logo-dipartimento.png  used on input line 39.
+Package pdftex.def Info: _assets/logo-dipartimento.png  used on input line 41.
 (pdftex.def)             Requested size: 113.81102pt x 44.96902pt.
-<_assets/logo-universita-bn.png, id=6, 351.3125pt x 351.3125pt>
+<_assets/logo-universita-bn.png, id=22, 351.3125pt x 351.3125pt>
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
-Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 63.
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 65.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [1
@@ -386,40 +406,82 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.67 \newpage
+l.69 \newpage
              
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
-Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 67.
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 69.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
- [1] (relazione.aux)
+ [1] (DescrizioneDataset.tex
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
+2.
+ (D:\MIK\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+))
+File: _assets/logo-universita-bn.png Graphic file (type png)
+<use _assets/logo-universita-bn.png>
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 71.
+
+(pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
+
+[2] (statisticaDescrittiva.tex
+<../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQuality.png, id=57, 666.690
+75pt x 462.528pt>
+File: ../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQuality.png Graphic fi
+le (type png)
+<use ../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQuality.png>
+Package pdftex.def Info: ../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQua
+lity.png  used on input line 10.
+(pdftex.def)             Requested size: 295.90588pt x 205.2844pt.
+<../graphs/DescriptiveStatisticPlots/boxplot_all_x_i.png, id=58, 666.69075pt x 
+462.528pt>
+File: ../graphs/DescriptiveStatisticPlots/boxplot_all_x_i.png Graphic file (typ
+e png)
+<use ../graphs/DescriptiveStatisticPlots/boxplot_all_x_i.png>
+Package pdftex.def Info: ../graphs/DescriptiveStatisticPlots/boxplot_all_x_i.pn
+g  used on input line 15.
+(pdftex.def)             Requested size: 295.90588pt x 205.2844pt.
+)
+File: _assets/logo-universita-bn.png Graphic file (type png)
+<use _assets/logo-universita-bn.png>
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 76.
+
+(pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
+ [3 <../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQuality.png> <../graphs
+/DescriptiveStatisticPlots/boxplot_all_x_i.png>] (relazione.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `relazione.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 2CB42ED9F9A06E67AF39B192C50396B0;735.
  ) 
 Here is how much of TeX's memory you used:
- 10860 strings out of 474485
- 168203 string characters out of 5761557
- 1931542 words of memory out of 5000000
- 33010 multiletter control sequences out of 15000+600000
- 566976 words of font info for 53 fonts, out of 8000000 for 9000
+ 11126 strings out of 474485
+ 173758 string characters out of 5761557
+ 1932542 words of memory out of 5000000
+ 33245 multiletter control sequences out of 15000+600000
+ 569848 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,254b,490s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,349b,492s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
-1440.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecrm1200.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecbx1200.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecbx1728.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/
-ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fon
-ts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk>
-Output written on relazione.pdf (2 pages, 236061 bytes).
+1000.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ectt1200.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\ecti1200.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\tcrm1200.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\anuar\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\anuar\AppData\Loca
+l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\anuar\AppDat
+a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\anuar\
+AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\
+anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><D:/M
+IK/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on relazione.pdf (4 pages, 307915 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 3 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 383 PDF objects out of 1000 (max. 8388607)
+ 14 named destinations out of 1000 (max. 500000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

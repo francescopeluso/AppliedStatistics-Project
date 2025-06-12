@@ -9,6 +9,8 @@
 \usepackage{eso-pic} % Per aggiungere il logo come sfondo
 \usepackage{transparent} % Per gestire la trasparenza
 \usepackage[hyperindex, bookmarks=true, colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
+\usepackage{subfigure} % per inserire due immagini affiancate o per raggruppare in un unico blocco più immagini
+
 
 % Margini della pagina
 \geometry{a4paper, margin=2.5cm}
@@ -65,6 +67,10 @@
 % Indice
 \tableofcontents
 \newpage
+\input{DescrizioneDataset}
+\newpage
+\input{statisticaDescrittiva.tex}
+
 
 
 \end{document}

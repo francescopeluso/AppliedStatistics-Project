@@ -48,8 +48,10 @@ boxplot(data[, !(names(data) %in% "y_VideoQuality")])
 #Valutazione della relazione tra y_VideoQuality e le varibili xi
 
 dev.new()
-plot(data$y_VideoQuality,data$x1_ISO,xlab=)
-
+plot(data$x1_ISO,data$y_VideoQuality,xlab="x1_ISO",ylab = 'y_VideoQuality')
+fit1 = lm(data$y_VideoQuality~data$x1_ISO,data=data)
+abline(fit1, col="red",lw=2)
+summary(fit1)
 
 dev.new()
 plot(data$x5_CROP, data$y_VideoQuality,xlab="x",ylab="y");

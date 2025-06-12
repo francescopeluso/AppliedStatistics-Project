@@ -8,8 +8,8 @@
 
 # Impostazione path cartella progetto (N.B. cambia a seconda di chi usa il file)
 #setwd('~/GitHub Repos/AppliedStatistics-Project')     # path Francesco
-setwd('C:/Users/anuar/AppliedStatistics-Project')     # path Corrado
-#setwd('')     # path Anuar
+#setwd('C:/Users/anuar/AppliedStatistics-Project')     # path Anuar
+setwd('/Users/corry/AppliedStatistics-Project')     # path Corrado
 #setwd('')     # path Gerardo
 
 # ------------------------------------------------------------------------------
@@ -54,6 +54,7 @@ fit1 = lm(data$y_VideoQuality~data$x1_ISO,data=data)
 abline(fit1, col="red",lw=2)
 summary(fit1)
 
+<<<<<<< HEAD
 #x2_FRatio
 dev.new()
 plot(data$x2_FRatio,data$y_VideoQuality,xlab="x2_FRatio",ylab = 'y_VideoQuality')
@@ -95,5 +96,13 @@ plot(data$x7_PixDensity,data$y_VideoQuality,xlab="x1_ISO",ylab = 'y_VideoQuality
 fit6 = lm(data$y_VideoQuality~data$x7_PixDensity,data=data)
 abline(fit6, col="red",lw=2)
 summary(fit6)
+=======
+dev.new()
+plot(data$x5_CROP, data$y_VideoQuality,xlab="x",ylab="y");
+fit5= lm(data$y_VideoQuality~data$x5_CROP, data=data)
+abline(fit5, col="red", lw=2)
+summary(fit5) #summary(fit1)$r.squared
+
+>>>>>>> 6d8a99264d314cf9aac525fe4dab18072683ac0e
 
 

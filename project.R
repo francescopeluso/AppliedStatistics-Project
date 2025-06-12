@@ -20,6 +20,14 @@ data = read.csv('./dataset.csv');
 # Scatterplot delle correlazioni tra le coppie di variabili
 plot(data);
 
+library(ggplot2)
+library("GGally")
+
+ggpairs(data)
+
+library("corrplot")
+corrplot.mixed(cor(data),number.cex=0.8,tl.cex=0.8)
+
 lin_mod_all=lm(y_VideoQuality ~ ., data=data)
 summary(lin_mod_all)
 

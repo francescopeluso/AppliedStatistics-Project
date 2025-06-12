@@ -7,8 +7,8 @@
 # ------------------------------------------------------------------------------
 
 # Impostazione path cartella progetto (N.B. cambia a seconda di chi usa il file)
-setwd('~/GitHub Repos/AppliedStatistics-Project')     # path Francesco
-#setwd('')     # path Corrado
+#setwd('~/GitHub Repos/AppliedStatistics-Project')     # path Francesco
+setwd('C:/Users/anuar/AppliedStatistics-Project')     # path Corrado
 #setwd('')     # path Anuar
 #setwd('')     # path Gerardo
 

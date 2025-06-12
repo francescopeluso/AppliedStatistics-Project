@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.7)  7 JUN 2025 15:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.7)  7 JUN 2025 15:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -266,8 +266,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count281
 \l__pdf_internal_box=\box51
-)
-No file relazione.aux.
+) (relazione.aux)
 \openout1 = `relazione.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -288,6 +287,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
+
 (D:\MIK\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count282
@@ -347,6 +347,7 @@ LaTeX Info: Redefining \it@ccap on input line 31.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 31.
+(relazione.out) (relazione.out)
 \@outlinefile=\write3
 \openout3 = `relazione.out'.
 
@@ -366,30 +367,17 @@ File: _assets/logo-dipartimento.png Graphic file (type png)
 <use _assets/logo-dipartimento.png>
 Package pdftex.def Info: _assets/logo-dipartimento.png  used on input line 39.
 (pdftex.def)             Requested size: 113.81102pt x 44.96902pt.
+<_assets/logo-universita-bn.png, id=6, 351.3125pt x 351.3125pt>
+File: _assets/logo-universita-bn.png Graphic file (type png)
+<use _assets/logo-universita-bn.png>
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 63.
 
-LaTeX Warning: File `logo-universita-bn.png' not found on input line 63.
+(pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
+ [1
 
-
-! Package pdftex.def Error: File `logo-universita-bn.png' not found: using draf
-t setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.63 \end{titlepage}
-                    
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
-3.
-(D:\MIK\tex/latex/base\t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [1{C:/Users/anuar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
-
- <./_assets/logo-universita.png> <./_assets/logo-dipartimento.png>]
-No file relazione.toc.
+{C:/Users/anuar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./_assets/lo
+go-universita-bn.png> <./_assets/logo-universita.png> <./_assets/logo-dipartime
+nto.png>] (relazione.toc)
 \tf@toc=\write4
 \openout4 = `relazione.toc'.
 
@@ -400,47 +388,25 @@ been already used, duplicate ignored
                    \relax 
 l.67 \newpage
              
+File: _assets/logo-universita-bn.png Graphic file (type png)
+<use _assets/logo-universita-bn.png>
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 67.
 
-LaTeX Warning: File `logo-universita-bn.png' not found on input line 67.
-
-
-! Package pdftex.def Error: File `logo-universita-bn.png' not found: using draf
-t setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.67 \newpage
-             
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[1]
-
-Package transparent Warning: Rerun to get transparencies right.
-
-(relazione.aux)
+(pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
+ [1] (relazione.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-
-
-Package rerunfilecheck Warning: File `relazione.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `relazione.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `relazione.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 10893 strings out of 474485
- 169163 string characters out of 5761557
+ 10860 strings out of 474485
+ 168203 string characters out of 5761557
  1931542 words of memory out of 5000000
- 33047 multiletter control sequences out of 15000+600000
- 567289 words of font info for 54 fonts, out of 8000000 for 9000
+ 33010 multiletter control sequences out of 15000+600000
+ 566976 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,79p,254b,490s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
@@ -450,11 +416,10 @@ Here is how much of TeX's memory you used:
 pen/ec/dpi600\ecbx1728.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour
 /jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/
 ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fon
-ts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk> <C:\Users\anuar\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk>
-Output written on relazione.pdf (2 pages, 169707 bytes).
+ts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk>
+Output written on relazione.pdf (2 pages, 236061 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
+ 193 PDF objects out of 1000 (max. 8388607)
  3 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

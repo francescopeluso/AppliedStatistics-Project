@@ -8,8 +8,8 @@
 
 # Impostazione path cartella progetto (N.B. cambia a seconda di chi usa il file)
 #setwd('~/GitHub Repos/AppliedStatistics-Project')     # path Francesco
-setwd('C:/Users/anuar/AppliedStatistics-Project')     # path Corrado
-#setwd('')     # path Anuar
+#setwd('C:/Users/anuar/AppliedStatistics-Project')     # path Anuar
+setwd('/Users/corry/AppliedStatistics-Project')     # path Corrado
 #setwd('')     # path Gerardo
 
 # ------------------------------------------------------------------------------
@@ -49,6 +49,13 @@ boxplot(data[, !(names(data) %in% "y_VideoQuality")])
 
 dev.new()
 plot(data$y_VideoQuality,data$x1_ISO,xlab=)
+
+
+dev.new()
+plot(data$x5_CROP, data$y_VideoQuality,xlab="x",ylab="y");
+fit5= lm(data$y_VideoQuality~data$x5_CROP, data=data)
+abline(fit5, col="red", lw=2)
+summary(fit5) #summary(fit1)$r.squared
 
 
 

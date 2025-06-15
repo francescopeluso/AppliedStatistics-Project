@@ -121,7 +121,7 @@ summary(fit6)
 # multipla
 # ------------------------------------------------------------------------------
 
-# Modello costruto con tutte le variabili indipendenti
+# Modello costruito con tutte le variabili indipendenti
 model_full <- lm(y_VideoQuality ~ ., data=data)
 summary(model_full)
 
@@ -162,19 +162,11 @@ summary(model_quad)
 # il residual standard error sia diminuito da 12.8 a 9.68, con il p-value
 # complessivo del modello minore di 2.2*10^16.
 
-# Proviamo adesso ad introdurre come nuovi regressori, come per esempio
-# le interazioni tra tutte le possibili coppie di variabil indipendenti,
-# per verificare se è possibile migliorare ulteriormente il modello
-
-model_final <- lm(y_VideoQuality ~ (x1_ISO + x2_FRatio + x3_TIME + x4_MP + 
-                                      x5_CROP + x6_FOCAL + x7_PixDensity)^2, data = data)
-summary(model_final)
-
 # Procediamo a confrontare i tre modelli appena creati tramite AIC e BIB:
 # il modello con valore più basso di AIC e BIC sarà quello preferibile
 
-AIC(model_full, model_reduced, model_quad, model_final)
-BIC(model_full, model_reduced, model_quad, model_final)
+AIC(model_full, model_reduced, model_quad)
+BIC(model_full, model_reduced, model_quad)
 
 # In effetti, entrambi i confronti ci confermano che l'ultimo modello costruito,
 # ovvero quello con i termini quadratici, sia il migliore.
@@ -189,17 +181,71 @@ BIC(model_full, model_reduced, model_quad, model_final)
 model_stepwise <- step(model_full, direction = "both", trace = 1)
 summary(model_stepwise)  # risultato AIC = 514*
 
-model_stepwise_quad <- (model_quad, direction = "both", trace = 1)
-summary(model_stepwise_quad)  # risultato AIC = 514*
-
 # Confronto AIC/BIC tra tutti i modelli
 AIC(model_full, model_reduced, model_quad, model_stepwise) # *però qui risulta essere 799, wtf
 BIC(model_full, model_reduced, model_quad, model_stepwise)
 
-mod_step_full <- lm(y_VideoQuality ~ (.)^2 + I(x5_CROP^2) + I(x7_PixDensity^2), data = data)
-mod_stepwise <- step(mod_step_full)
-summary(mod_stepwise)
+# Proviamo adesso, con un metodo stepwise, a vedere se è possibile migliorare
+# il modello (a partire da quello con i termini quadratici), andando ad
+# aggiungere le interazioni tra le possibili coppie di variabili indipendenti
 
-AIC(model_full, model_reduced, model_quad, model_stepwise, mod_stepwise)
-BIC(model_full, model_reduced, model_quad, model_stepwise, mod_stepwise)
+model_step_interactions <- lm(y_VideoQuality ~ (.)^2 + I(x5_CROP^2) + I(x7_PixDensity^2), data = data)
+model_step_interactions <- step(model_step_interactions)
+summary(model_step_interactions)
 
+AIC(model_full, model_reduced, model_quad, model_stepwise, model_step_interactions)
+BIC(model_full, model_reduced, model_quad, model_stepwise, model_step_interactions)
+
+# In seguito alle analisi effettuate, dunque, il miglior modello, secondo il
+# confronto AIC e BIC, sembra essere quello costruito come:
+#
+# y = beta0 + beta1*x1 + beta2*x1^2 + beta3*x2 + beta4*x2^2 + beta5*x3 + beta6*x5 + e
+# (dove il termine 'e' sarebbe il termine di errore, e beta0 l'intercetta)
+
+# Confrontiamo anche graficamente i nostri modelli di regressione multipla
+
+pred_full <- predict(model_full)
+pred_reduced <- predict(model_reduced) 
+pred_quad <- predict(model_quad)
+pred_stepwise <- predict(model_stepwise)
+
+# Layout 2x2 per confronto principale
+par(mfrow = c(2, 2), mar = c(4, 4, 3, 1))
+
+# Grafici osservati vs predetti
+models <- list("Completo" = pred_full, "Ridotto" = pred_reduced, 
+               "Quadratico" = pred_quad, "Stepwise" = pred_stepwise)
+colors <- c("#E31A1C", "#1F78B4", "#33A02C", "#FF7F00")
+
+for(i in 1:4) {
+  plot(data$y_VideoQuality, models[[i]], 
+       main = names(models)[i], xlab = "Osservato", ylab = "Predetto",
+       pch = 19, col = alpha(colors[i], 0.6))
+  abline(0, 1, lty = 2)
+  r2 <- cor(data$y_VideoQuality, models[[i]])^2
+  text(20, 100, paste("R² =", round(r2, 3)), cex = 0.9)
+}
+
+par(mfrow = c(1, 1))
+
+# Tabella performance
+model_list <- list(model_full, model_reduced, model_quad, model_stepwise)
+results <- data.frame(
+  Modello = c("Completo", "Ridotto", "Quadratico", "Stepwise"),
+  R2 = sapply(model_list, function(x) round(summary(x)$r.squared, 3)),
+  R2_adj = sapply(model_list, function(x) round(summary(x)$adj.r.squared, 3)),
+  AIC = round(sapply(model_list, AIC), 1),
+  BIC = round(sapply(model_list, BIC), 1)
+)
+
+print(results)
+
+# Grafico confronto diretto
+plot(data$y_VideoQuality, pred_quad, 
+     main = "Confronto Modelli", xlab = "y_VideoQuality", ylab = "Predizioni",
+     pch = 19, col = alpha("green", 0.7), cex = 0.8)
+points(data$y_VideoQuality, pred_full, pch = 19, col = alpha("red", 0.5), cex = 0.6)
+points(data$y_VideoQuality, pred_stepwise, pch = 19, col = alpha("orange", 0.5), cex = 0.6)
+abline(0, 1, lty = 2, lwd = 2)
+legend("topleft", c("Quadratico", "Completo", "Stepwise"), 
+       col = c("green", "red", "orange"), pch = 19, cex = 0.8)

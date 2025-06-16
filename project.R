@@ -29,19 +29,6 @@ data = read.csv('./dataset.csv');
 
 plot(data);
 
-library(ggplot2)
-library("GGally")
-
-ggpairs(data, upper = list(continuous = "blank"))   # nasconde i grafici sotto la diagonale
-
-# Basic Scatterplot Matrix
-pairs(~,
-      data=mtcars,
-      main="Simple Scatterplot Matrix"
-)
-
-library("corrplot")
-corrplot.mixed(cor(data),number.cex=0.8,tl.cex=0.8)
 
 lin_mod_all=lm(y_VideoQuality ~ ., data=data)
 summary(lin_mod_all)
@@ -56,13 +43,49 @@ boxplot(data[, !(names(data) %in% "y_VideoQuality")])
 
 #Istogrammi
 hist(data$y_VideoQuality,main="Distribuzione di y_VideoQuality", xlab="y_VideoQuality")
+hist(data$x1_ISO)
+hist(data$x2_FRatio)
+hist(data$x3_TIME)
+hist(data$x4_MP)
+hist(data$x5_CROP)
+hist(data$x6_FOCAL)
+hist(data$x7_PixDensity)
 
+#Normalità
+qqnorm(data$x1_ISO)
+qqline(data$x1_ISO)
+qqnorm(data$x2_FRatio)
+qqline(data$x2_FRatio)
+qqnorm(data$x3_TIME)
+qqline(data$x3_TIME)
+qqnorm(data$x4_MP)
+qqline(data$x4_MP)
+qqnorm(data$x5_CROP)
+qqline(data$x5_CROP)
+qqnorm(data$x6_FOCAL)
+qqline(data$x6_FOCAL)
+qqnorm(data$x7_PixDensity)
+qqline(data$x7_PixDensity)
 
 # ------------------------------------------------------------------------------
 # PUNTO 2:
 # Valutazione della relazione tra variabile dipendente e le singole
 # variabili indipendenti
 # ------------------------------------------------------------------------------
+# Basic Scatterplot Matrix
+pairs(data , upper.panel = NULL)
+
+#Advanced Scatterplot matrix
+library(ggplot2)
+library("GGally")
+ggpairs(data, upper = list(continuous = "blank"))   # nasconde i grafici sotto la diagonale
+#
+CorrPlot
+library("corrplot")
+corrplot.mixed(cor(data),number.cex=0.8,tl.cex=0.8)
+
+#matrice dei coefficienti di correlazione
+cor(data)
 
 #x1_ISO - sensibilità sensore
 dev.new()

@@ -6,6 +6,8 @@
 \usepackage{graphicx}
 \usepackage[italian]{babel}
 \usepackage{geometry}
+\usepackage{amsmath} 
+
 \usepackage{eso-pic} % Per aggiungere il logo come sfondo
 \usepackage{transparent} % Per gestire la trasparenza
 \usepackage[hyperindex, bookmarks=true, colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
@@ -37,7 +39,7 @@
     \centering
 
     \begin{tabular}{@{}c@{\hspace{0.5cm}}c@{}}
-        \raisebox{-.5\height}{\includegraphics[width=4cm]{_assets/logo-universita.png}} & 
+        
         \raisebox{-.5\height}{\includegraphics[width=4cm]{_assets/logo-dipartimento.png}} \\
     \end{tabular}\\[1cm]
     
@@ -70,7 +72,8 @@
 \input{DescrizioneDataset}
 \newpage
 \input{statisticaDescrittiva.tex}
-
+\newpage
+\input{Analisivariabili}
 
 
 \end{document}

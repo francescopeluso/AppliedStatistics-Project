@@ -7,8 +7,8 @@
 # ------------------------------------------------------------------------------
 
 # Impostazione path cartella progetto (N.B. cambia a seconda di chi usa il file)
-setwd('~/GitHub Repos/AppliedStatistics-Project')     # path Francesco
-#setwd('C:/Users/anuar/AppliedStatistics-Project')     # path Anuar
+#setwd('~/GitHub Repos/AppliedStatistics-Project')     # path Francesco
+setwd('C:/Users/anuar/AppliedStatistics-Project')     # path Anuar
 #setwd('/Users/corry/AppliedStatistics-Project')     # path Corrado
 #setwd('')     # path Gerardo
 
@@ -19,6 +19,10 @@ install.packages("GGally")
 
 # Lettura del dataset da file CSV
 data = read.csv('./dataset.csv');
+
+#per la funzione alpha
+install.packages("scales")  
+library(scales)
 
 
 # ------------------------------------------------------------------------------
@@ -40,7 +44,7 @@ median(data$y_VideoQuality) #analisi mediana
 mean(data$y_VideoQuality) #analisi media
 quantile(data$y_VideoQuality,probs=c(0.25,0.50,0.75)) #analisi quantili
 boxplot(data[, !(names(data) %in% "y_VideoQuality")])
-
+summary(data$y_VideoQuality)
 #Istogrammi
 hist(data$y_VideoQuality,main="Distribuzione di y_VideoQuality", xlab="y_VideoQuality")
 hist(data$x1_ISO)
@@ -52,20 +56,33 @@ hist(data$x6_FOCAL)
 hist(data$x7_PixDensity)
 
 #Normalità
-qqnorm(data$x1_ISO)
-qqline(data$x1_ISO)
-qqnorm(data$x2_FRatio)
-qqline(data$x2_FRatio)
-qqnorm(data$x3_TIME)
-qqline(data$x3_TIME)
-qqnorm(data$x4_MP)
-qqline(data$x4_MP)
-qqnorm(data$x5_CROP)
-qqline(data$x5_CROP)
-qqnorm(data$x6_FOCAL)
-qqline(data$x6_FOCAL)
-qqnorm(data$x7_PixDensity)
-qqline(data$x7_PixDensity)
+par(mfrow = c(2, 2))  # 2 righe, 2 colonne, per rappresentare i qqplot
+
+
+qqnorm(data$x1_ISO, main = "Q-Q Plot di x1_ISO")
+qqline(data$x1_ISO,  col = "red", lwd = 2)
+qqnorm(data$x2_FRatio, main = "Q-Q Plot di x2_FRatio")
+qqline(data$x2_FRatio,  col = "red", lwd = 2)
+qqnorm(data$x3_TIME, main = "Q-Q Plot di x3_TIME")
+qqline(data$x3_TIME,  col = "red", lwd = 2)
+qqnorm(data$x4_MP, main = "Q-Q Plot di x4_MP")
+qqline(data$x4_MP, col = "red", lwd = 2)
+
+par(mfrow = c(2, 2))   # 2 righe, 2 colonne, per rappresentare i qqplot
+
+
+qqnorm(data$x5_CROP, main = "Q-Q Plot di x5_CROP")
+qqline(data$x5_CROP,  col = "red", lwd = 2)
+qqnorm(data$x6_FOCAL, main = "Q-Q Plot di x6_FOCAL")
+qqline(data$x6_FOCAL,  col = "red", lwd = 2)
+qqnorm(data$x7_PixDensity, main = "Q-Q Plot di x7_PixDensity")
+qqline(data$x7_PixDensity,  col = "red", lwd = 2)
+
+qqnorm(data$y_VideoQuality, main = "Q-Q Plot di y_VideoQuality")
+qqline(data$y_VideoQuality)
+
+shapiro.test(data$x6_FOCAL)
+
 
 # ------------------------------------------------------------------------------
 # PUNTO 2:

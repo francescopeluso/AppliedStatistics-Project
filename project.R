@@ -185,7 +185,7 @@ summary(model_reduced)
 # Adj. Squared R sono rimasti pressochè simili
 
 # Dalle analisi effettuate nel primo punto, però, notiamo che con alcuni
-# regressori è presente una correlazione non lineare, ma quadratica,
+# regressori è presente un legame non lineare, ma quadratico,
 # dunque possiamo tentare di aggiungere dei termini quadratici al nostro
 # modello di regressione lineare (stiamo parlando di )
 
@@ -202,11 +202,19 @@ summary(model_quad)
 # il residual standard error sia diminuito da 12.8 a 9.68, con il p-value
 # complessivo del modello minore di 2.2*10^16.
 
-# Procediamo a confrontare i tre modelli appena creati tramite AIC e BIB:
+# Procediamo a confrontare i tre modelli appena creati tramite AIC e BIC:
 # il modello con valore più basso di AIC e BIC sarà quello preferibile
 
-AIC(model_full, model_reduced, model_quad)
+extractAIC(model_full)
+extractAIC(model_reduced)
+extractAIC(model_quad)
 BIC(model_full, model_reduced, model_quad)
+
+#rss <- sum(residuals(model_full)^2); rss
+#n <- length(model_full$fitted.values)
+#k <- length(coef(model_full))  # include intercetta
+#AIC_manual <- n * log(rss / n) + 2 * k
+#extractAIC(model_full)
 
 # In effetti, entrambi i confronti ci confermano che l'ultimo modello costruito,
 # ovvero quello con i termini quadratici, sia il migliore.
@@ -222,7 +230,10 @@ model_stepwise <- step(model_full, direction = "both", trace = 1)
 summary(model_stepwise)  # risultato AIC = 514*
 
 # Confronto AIC/BIC tra tutti i modelli
-AIC(model_full, model_reduced, model_quad, model_stepwise) # *però qui risulta essere 799, wtf
+extractAIC(model_full)
+extractAIC(model_reduced)
+extractAIC(model_quad)
+extractAIC(model_stepwise) 
 BIC(model_full, model_reduced, model_quad, model_stepwise)
 
 # Proviamo adesso, con un metodo stepwise, a vedere se è possibile migliorare
@@ -230,10 +241,15 @@ BIC(model_full, model_reduced, model_quad, model_stepwise)
 # aggiungere le interazioni tra le possibili coppie di variabili indipendenti
 
 model_step_interactions <- lm(y_VideoQuality ~ (.)^2 + I(x5_CROP^2) + I(x7_PixDensity^2), data = data)
-model_step_interactions <- step(model_step_interactions)
+model_step_interactions <- step(model_step_interactions, k=2)
+extractAIC(model_step_interactions)
 summary(model_step_interactions)
 
-AIC(model_full, model_reduced, model_quad, model_stepwise, model_step_interactions)
+extractAIC(model_full)
+extractAIC(model_reduced)
+extractAIC(model_quad)
+extractAIC(model_stepwise)
+extractAIC(model_step_interactions)
 BIC(model_full, model_reduced, model_quad, model_stepwise, model_step_interactions)
 
 # In seguito alle analisi effettuate, dunque, il miglior modello, secondo il
@@ -289,3 +305,12 @@ points(data$y_VideoQuality, pred_stepwise, pch = 19, col = alpha("orange", 0.5),
 abline(0, 1, lty = 2, lwd = 2)
 legend("topleft", c("Quadratico", "Completo", "Stepwise"), 
        col = c("green", "red", "orange"), pch = 19, cex = 0.8)
+
+# ------------------------------------------------------------------------------
+# PUNTO 4-5:
+# Stima dei parametri dei modelli e intervalli di confidenza
+# multipla
+# ------------------------------------------------------------------------------
+
+
+

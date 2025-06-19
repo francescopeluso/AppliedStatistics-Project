@@ -44,7 +44,7 @@ Gli intervalli di confidenza al $5\%$, ottenuti tramite il metodo confint() di R
 
 I valori di $R^2$ e AIC ottenuti sono:
 \begin{equation*}
-	R^2 = 0.7803 \quad AIC = 514.69
+	R^2 = 0.7803, \quad AIC = 514.69.
 \end{equation*}
 \subsection{Modello 2}
 Il prossimo modello analizzato è quello ottenuto aggiungendo tutti i regressori più significativi con l'aggiunta di alcuni regressori al quadrato.
@@ -93,7 +93,7 @@ Gli intervalli di confidenza al $5\%$, ottenuti tramite il metodo confint() di R
 
 I valori di $R^2$ e AIC ottenuti sono:
 \begin{equation*}
-	R^2 =   0.8769 \quad AIC = 460.7592
+	R^2 =   0.8769, \quad AIC = 460.7592.
 \end{equation*}
 \subsection{Modello 3}
 Questo modello è ottenuto tramite la funzione step() di R eliminando i regressori non significativi, a partire dal modello contenente tutti i regressori di primo grado. Il modello ottenuto è:
@@ -118,3 +118,107 @@ La stima dei parametri ottenuti per questo modello è:
 	\caption{Stime dei coefficienti e deviazioni standard del modello}
 	\label{tab:coef_estimates_poly}
 \end{table}
+Gli intervalli di confidenza al $5\%$, ottenuti tramite il metodo confint() di R, sono:
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Parametro} & \textbf{Lower bound} & \textbf{Upper bound} \\
+		\hline
+		$\beta_0$ & 63.08 & 68.21 \\
+		$\beta_1$ & -11.92 & -6.45 \\
+		$\beta_2$ & -15.62 & -10.72 \\
+		$\beta_3$ & 1.62 & 6.59 \\
+		$\beta_4$ & -16.89 & -11.93 \\
+		$\beta_5$ & -4.58 & 0.54 \\
+		\hline
+	\end{tabular}
+	\caption{Intervalli di confidenza al 95\% per i coefficienti del modello}
+	\label{tab:ci_coefficienti}
+\end{table}
+I valori di $R^2$ e AIC ottenuti sono:
+\begin{equation*}
+	R^2 =    0.7859, \quad AIC =  514.11325.
+\end{equation*}
+\subsection{Modello 4}
+L'ultimo modello analizzato, è ottenuto tramite la seguente istruzione R, adottando la funzione step():
+\begin{align*}
+	y &= \beta_0 
+	+ \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3 + \beta_4 x_4 + \beta_5 x_5 
+	+ \beta_6 x_6 + \beta_7 x_7 
+	+ \beta_8 x_1^2 + \beta_9 x_2^2 + \beta_{10} x_6^2 + \beta_{11} x_7^2 \\
+	&+ \beta_{12} x_1 x_6 + \beta_{13} x_2 x_4 + \beta_{14} x_3 x_4 
+	+ \beta_{15} x_3 x_5 + \beta_{16} x_3 x_7 
+	+ \beta_{17} x_4 x_7.
+\end{align*}
+In particolare il modello di partenza da cui si è partiti:
+\begin{verbatim}
+	model_step_interactions <- lm(y_VideoQuality ~ (.)^2 + I(x1_ISO^2) + 
+	I(x2_FRatio^2) + I(x3_TIME^2) + I(x4_MP^2) + I(x5_CROP^2) + I(x6_FOCAL^2) + 
+	I(x7_PixDensity^2), data = data)
+\end{verbatim}
+La stima dei parametri ottenuti per questo modello è:
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Parametro} & \textbf{Stima} & \textbf{Dev. Std.} \\
+		\hline
+		$\beta_0$   & 81.64  & 2.18 \\
+		$\beta_1$   & -8.77  & 1.00 \\
+		$\beta_2$   & -13.56 & 0.90 \\
+		$\beta_3$   & 4.31   & 1.03 \\
+		$\beta_4$   & -0.25  & 1.46 \\
+		$\beta_5$   & -13.37 & 0.92 \\
+		$\beta_6$   & 0.62   & 0.99 \\
+		$\beta_7$   & -2.96  & 1.60 \\
+		$\beta_8$   & -8.85  & 1.16 \\
+		$\beta_9$   & -6.57  & 1.01 \\
+		$\beta_{10}$ & -1.89  & 1.07 \\
+		$\beta_{11}$ & 2.91   & 1.86 \\
+		$\beta_{12}$ & -1.71  & 1.18 \\
+		$\beta_{13}$ & 1.66   & 0.99 \\
+		$\beta_{14}$ & -2.81  & 1.42 \\
+		$\beta_{15}$ & 2.83   & 0.99 \\
+		$\beta_{16}$ & 3.24   & 1.54 \\
+		$\beta_{17}$ & -3.55  & 2.25 \\
+		\hline
+	\end{tabular}
+	\caption{Stime dei coefficienti e deviazioni standard del modello}
+	\label{tab:stima_coef_std}
+\end{table}
+Gli intervalli di confidenza al $5\%$, ottenuti tramite il metodo confint() di R, sono:
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Parametro} & \textbf{Lower bound} & \textbf{Upper bound} \\
+		\hline
+		$\beta_0$   & 77.29  & 85.99 \\
+		$\beta_1$   & -10.76 & -6.78 \\
+		$\beta_2$   & -15.34 & -11.77 \\
+		$\beta_3$   & 2.26   & 6.37 \\
+		$\beta_4$   & -3.16  & 2.65 \\
+		$\beta_5$   & -15.20 & -11.53 \\
+		$\beta_6$   & -1.34  & 2.59 \\
+		$\beta_7$   & -6.14  & 0.22 \\
+		$\beta_8$   & -11.16 & -6.55 \\
+		$\beta_9$   & -8.58  & -4.57 \\
+		$\beta_{10}$ & -4.01  & 0.23 \\
+		$\beta_{11}$ & -0.78  & 6.61 \\
+		$\beta_{12}$ & -4.05  & 0.64 \\
+		$\beta_{13}$ & -0.31  & 3.62 \\
+		$\beta_{14}$ & -5.65  & 0.02 \\
+		$\beta_{15}$ & 0.86   & 4.81 \\
+		$\beta_{16}$ & 0.19   & 6.30 \\
+		$\beta_{17}$ & -8.02  & 0.93 \\
+		\hline
+	\end{tabular}
+	\caption{Intervalli di confidenza al 95\% per i coefficienti del modello}
+	\label{tab:ci_coefficienti}
+\end{table}
+I valori di $R^2$ e AIC ottenuti sono:
+\begin{equation*}
+	R^2 =     0.9128, \quad AIC=448.27.
+\end{equation*}
+

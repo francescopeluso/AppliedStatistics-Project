@@ -250,6 +250,8 @@ extractAIC(model_reduced)
 extractAIC(model_quad)
 extractAIC(model_stepwise)
 extractAIC(model_step_interactions)
+
+confint(model_full)
 BIC(model_full, model_reduced, model_quad, model_stepwise, model_step_interactions)
 
 # In seguito alle analisi effettuate, dunque, il miglior modello, secondo il

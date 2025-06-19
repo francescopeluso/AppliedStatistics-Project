@@ -155,6 +155,59 @@ abline(fit6, col="red",lw=2)
 summary(fit6)
 
 
+
+# ------------------------------------------------------------------------------
+# PUNTO 2.5
+# Valutazione della relazione tra variabile dipendente e le singole
+# variabili indipendenti al quadrato
+# ------------------------------------------------------------------------------
+
+#x1_ISO - sensibilità sensore
+dev.new()
+plot(data$x1_ISO,data$y_VideoQuality,xlab="x1_ISO",ylab="y_VideoQuality")
+fit7 <- lm(y_VideoQuality ~ poly(x1_ISO, 2, raw = TRUE), data = data)
+x_vals <- seq(min(data$x1_ISO), max(data$x1_ISO), length.out = 200)
+y_pred <- predict(fit7, newdata = data.frame(x1_ISO = x_vals))
+lines(x_vals, y_pred, col = "red", lwd = 2)
+summary(fit7)
+
+#x2_FRatio - rapporto focale
+dev.new()
+plot(data$x2_FRatio,data$y_VideoQuality,xlab="x2_FRatio",ylab="y_VideoQuality")
+fit8 <- lm(y_VideoQuality ~ poly(x2_FRatio, 2, raw = TRUE), data = data)
+x_vals <- seq(min(data$x2_FRatio), max(data$x2_FRatio), length.out = 200)
+y_pred <- predict(fit8, newdata = data.frame(x2_FRatio = x_vals))
+lines(x_vals, y_pred, col = "red", lwd = 2)
+summary(fit8)
+
+#x3_TIME - tempo di esposizione
+dev.new()
+plot(data$x3_TIME,data$y_VideoQuality,xlab="x3_Time",ylab="y_VideoQuality")
+fit11 <- lm(y_VideoQuality ~ poly(x3_Time, 2, raw = TRUE), data = data)
+x_vals <- seq(min(data$x3_TIME), max(data$x3_TIME), length.out = 200)
+y_pred <- predict(fit11, newdata = data.frame(x3_TIME = x_vals))
+lines(x_vals, y_pred, col = "red", lwd = 2)
+summary(fit11)
+
+#x5_CROP - crop factor
+dev.new()
+plot(data$x5_CROP,data$y_VideoQuality,xlab="x5_CROP",ylab="y_VideoQuality")
+fit9 <- lm(y_VideoQuality ~ poly(x5_CROP, 2, raw = TRUE), data = data)
+x_vals <- seq(min(data$x5_CROP), max(data$x5_CROP), length.out = 200)
+y_pred <- predict(fit9, newdata = data.frame(x5_CROP = x_vals))
+lines(x_vals, y_pred, col = "red", lwd = 2)
+summary(fit9)
+
+#x5_CROP - crop factor e x7_PixDensity
+dev.new()
+plot(data$x5_CROP,data$x7_PixDensity,xlab="x5_CROP",ylab="x7_PixDensity")
+fit10 <- lm(x7_PixDensity ~ poly(x5_CROP, 2, raw = TRUE), data = data)
+x_vals <- seq(min(data$x5_CROP), max(data$x5_CROP), length.out = 200)
+y_pred <- predict(fit10, newdata = data.frame(x5_CROP = x_vals))
+lines(x_vals, y_pred, col = "red", lwd = 2)
+summary(fit10)
+
+
 # ------------------------------------------------------------------------------
 # PUNTO 3:
 # Definizione del modello statistico dei dati tramite regressione lineare
@@ -240,7 +293,7 @@ BIC(model_full, model_reduced, model_quad, model_stepwise)
 # il modello (a partire da quello con i termini quadratici), andando ad
 # aggiungere le interazioni tra le possibili coppie di variabili indipendenti
 
-model_step_interactions <- lm(y_VideoQuality ~ (.)^2 + I(x5_CROP^2) + I(x7_PixDensity^2), data = data)
+model_step_interactions <- lm(y_VideoQuality ~ (.)^2 + I(x5_CROP^2), data = data)
 model_step_interactions <- step(model_step_interactions, k=2)
 extractAIC(model_step_interactions)
 summary(model_step_interactions)
@@ -337,5 +390,11 @@ summary(model_stepwise)
 dev.new(width = 550, height = 330, unit = "px")
 par(mfrow=c(2,2))
 plot(model_stepwise, main = "modello stepwise")
+dev.print(device=pdf,"diagLin1.pdf")
+
+summary(model_step_interactions)
+dev.new(width = 550, height = 330, unit = "px")
+par(mfrow=c(2,2))
+plot(model_step_interactions, main = "modello stepwise ??")
 dev.print(device=pdf,"diagLin1.pdf")
 

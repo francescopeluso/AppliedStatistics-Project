@@ -5,3 +5,7 @@
 \contentsline {subsection}{\numberline {2.1}Boxplot dei dati}{3}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Analisi di normalità}{4}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Analisi della dipendenza tra le variabili}{5}{section.3}%
+\contentsline {section}{\numberline {4}Analisi dei modelli}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Modello 1}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Modello 2}{6}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Modello 3}{7}{subsection.4.3}%

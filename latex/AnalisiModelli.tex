@@ -1,0 +1,120 @@
+\section{Analisi dei modelli}
+In questa sezione si analizzeranno differenti modelli e successivamente si confronteranno i modelli in base ai valori di AIC e dai risultati ottenuti dai test diagnostici.
+
+\subsection{Modello 1}
+Il primo modello analizzato è quello che include i regressori (di primo grado) più significativi (in base al valore di p\_value misurato precedentemente). Ovvero:
+\begin{equation*}
+y=\beta_0+\beta_1x_1+\beta_2x_2+\beta_3x_3+\beta_5x_5.
+\end{equation*}
+La stima dei parametri ottenuti per questo modello è
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Parametro} & \textbf{Stima} & \textbf{Dev. Std.} \\
+		\hline
+		$\beta_0$ & 65.62  & 1.30 \\
+		$\beta_1$ & -9.37  & 1.38 \\
+		$\beta_2$ & -13.33 & 1.24 \\
+		$\beta_3$ & 4.01   & 1.26 \\
+		$\beta_5$ & -14.52 & 1.26 \\
+		\hline
+	\end{tabular}
+	\caption{Stime dei coefficienti e deviazioni standard del modello}
+	\label{tab:coef_estimates}
+\end{table}
+
+Gli intervalli di confidenza al $5\%$, ottenuti tramite il metodo confint() di R, sono:
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Parametro} & \textbf{Lower bound} & \textbf{Upper bound} \\
+		\hline
+		$\beta_0$ & 63.04 & 68.20 \\
+		$\beta_1$ & -12.11 & -6.62 \\
+		$\beta_2$ & -15.79 & -10.87 \\
+		$\beta_3$ & 1.51 & 6.51 \\
+		$\beta_5$ & -17.01 & -12.03 \\
+		\hline
+	\end{tabular}
+	\caption{Intervalli di confidenza al 95\% per i coefficienti del modello}
+	\label{tab:ci_coefficienti}
+\end{table}
+
+I valori di $R^2$ e AIC ottenuti sono:
+\begin{equation*}
+	R^2 = 0.7803 \quad AIC = 514.69
+\end{equation*}
+\subsection{Modello 2}
+Il prossimo modello analizzato è quello ottenuto aggiungendo tutti i regressori più significativi con l'aggiunta di alcuni regressori al quadrato.
+\begin{equation*}
+	y=\beta_0 + \beta_1x_1+\beta_2x_1^2+\beta_3x_2+\beta_4x_2^2+\beta_5x_3+\beta_6x_5
+\end{equation*}
+La stima dei parametri ottenuti per questo modello è
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Parametro} & \textbf{Stima} & \textbf{Dev. Std.} \\
+		\hline
+		$\beta_0$ & 79.93  & 1.95 \\
+		$\beta_1$ & -8.66  & 1.05 \\
+		$\beta_2$ & -8.03  & 1.23 \\
+		$\beta_3$ & -13.49 & 0.94 \\
+		$\beta_4$ & -6.38  & 1.09 \\
+		$\beta_5$ & 3.94   & 0.95 \\
+		$\beta_6$ & -13.23 & 0.96 \\
+		\hline
+	\end{tabular}
+	\caption{Stime dei coefficienti e errori standard del modello}
+	\label{tab:coef_estimates_poly}
+\end{table}
+
+Gli intervalli di confidenza al $5\%$, ottenuti tramite il metodo confint() di R, sono:
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Parametro} & \textbf{Lower bound} & \textbf{Upper bound} \\
+		\hline
+		$\beta_0$ & 76.06 & 83.80 \\
+		$\beta_1$ & -10.75 & -6.58 \\
+		$\beta_2$ & -10.48 & -5.58 \\
+		$\beta_3$ & -15.36 & -11.63 \\
+		$\beta_4$ & -8.55 & -4.22 \\
+		$\beta_5$ & 2.05 & 5.84 \\
+		$\beta_6$ & -15.14 & -11.32 \\
+		\hline
+	\end{tabular}
+	\caption{Intervalli di confidenza al 95\% per i coefficienti del modello}
+	\label{tab:ci_coefficienti}
+\end{table}
+
+I valori di $R^2$ e AIC ottenuti sono:
+\begin{equation*}
+	R^2 =   0.8769 \quad AIC = 460.7592
+\end{equation*}
+\subsection{Modello 3}
+Questo modello è ottenuto tramite la funzione step() di R eliminando i regressori non significativi, a partire dal modello contenente tutti i regressori di primo grado. Il modello ottenuto è:
+\begin{equation*}
+	y=\beta_0+\beta_1x_1+\beta_2x_2+\beta_3x_3+\beta_4x_5+\beta_5x_7
+\end{equation*}
+La stima dei parametri ottenuti per questo modello è:
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Parametro} & \textbf{Stima} & \textbf{Dev. Std.} \\
+		\hline
+		$\beta_0$ & 65.65  & 1.29 \\
+		$\beta_1$ & -9.18  & 1.38 \\
+		$\beta_2$ & -13.17 & 1.23 \\
+		$\beta_3$ & 4.11   & 1.25 \\
+		$\beta_4$ & -14.41 & 1.25 \\
+		$\beta_5$ & -2.02  & 1.29 \\
+		\hline
+	\end{tabular}
+	\caption{Stime dei coefficienti e deviazioni standard del modello}
+	\label{tab:coef_estimates_poly}
+\end{table}

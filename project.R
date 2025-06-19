@@ -8,9 +8,9 @@
 
 # Impostazione path cartella progetto (N.B. cambia a seconda di chi usa il file)
 #setwd('~/GitHub Repos/AppliedStatistics-Project')     # path Francesco
-setwd('C:/Users/anuar/AppliedStatistics-Project')     # path Anuar
+#setwd('C:/Users/anuar/AppliedStatistics-Project')     # path Anuar
 #setwd('/Users/corry/AppliedStatistics-Project')     # path Corrado
-#setwd('')     # path Gerardo
+setwd('C:/Users/ACER/Desktop/GitHub/AppliedStatistics-Project')     # path Gerardo
 
 # ------------------------------------------------------------------------------
 
@@ -315,4 +315,29 @@ legend("topleft", c("Quadratico", "Completo", "Stepwise"),
 # ------------------------------------------------------------------------------
 
 
+
+
+summary(model_full)
+dev.new(width = 550, height = 330, unit = "px")
+par(mfrow=c(2,2))
+plot(model_full, main = "all linear regressors")
+dev.print(device=pdf,"diagLin1.pdf")
+
+summary(model_reduced)
+dev.new(width = 550, height = 330, unit = "px")
+par(mfrow=c(2,2))
+plot(model_reduced, main = "modello ridotto")
+dev.print(device=pdf,"diagLin1.pdf")
+
+summary(model_quad)
+dev.new(width = 550, height = 330, unit = "px")
+par(mfrow=c(2,2))
+plot(model_quad, main = "modello quadratico")
+dev.print(device=pdf,"diagLin1.pdf")
+
+summary(model_stepwise)
+dev.new(width = 550, height = 330, unit = "px")
+par(mfrow=c(2,2))
+plot(model_stepwise, main = "modello stepwise")
+dev.print(device=pdf,"diagLin1.pdf")
 

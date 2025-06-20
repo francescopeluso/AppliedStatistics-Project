@@ -8,9 +8,9 @@
 
 # Impostazione path cartella progetto (N.B. cambia a seconda di chi usa il file)
 #setwd('~/GitHub Repos/AppliedStatistics-Project')     # path Francesco
-#setwd('C:/Users/anuar/AppliedStatistics-Project')     # path Anuar
+setwd('C:/Users/anuar/AppliedStatistics-Project')     # path Anuar
 #setwd('/Users/corry/AppliedStatistics-Project')     # path Corrado
-setwd('C:/Users/ACER/Desktop/GitHub/AppliedStatistics-Project')     # path Gerardo
+#setwd('C:/Users/ACER/Desktop/GitHub/AppliedStatistics-Project')     # path Gerardo
 
 # ------------------------------------------------------------------------------
 
@@ -404,24 +404,40 @@ dev.print(device=pdf,"diagLin1.pdf")
 summary(model_reduced)
 dev.new(width = 550, height = 330, unit = "px")
 par(mfrow=c(2,2))
-plot(model_reduced, main = "modello ridotto")
-dev.print(device=pdf,"diagLin1.pdf")
+plot(model_reduced, main = "modello 1")
+dev.print(device=pdf,"diagLin2.pdf")
 
 summary(model_quad)
 dev.new(width = 550, height = 330, unit = "px")
 par(mfrow=c(2,2))
-plot(model_quad, main = "modello quadratico")
-dev.print(device=pdf,"diagLin1.pdf")
+plot(model_quad, main = "modello 2")
+dev.print(device=pdf,"diagLin3.pdf")
 
 summary(model_stepwise)
 dev.new(width = 550, height = 330, unit = "px")
-par(mfrow=c(2,2))
-plot(model_stepwise, main = "modello stepwise")
-dev.print(device=pdf,"diagLin1.pdf")
+par(mfrow=c(1,2))
+plot(model_stepwise, main = "modello 3")
+dev.print(device=pdf,"diagLin4.pdf")
 
 summary(model_step_interactions)
 dev.new(width = 550, height = 330, unit = "px")
-par(mfrow=c(2,2))
-plot(model_step_interactions, main = "modello stepwise ??")
-dev.print(device=pdf,"diagLin1.pdf")
+par(mfrow=c(1,2))
+plot(model_step_interactions, main = "modello 4")
+dev.print(device=pdf,"diagLin5.pdf")
 
+
+plot_diagnostics <- function(model, filename, title) {
+  pdf(filename, width = 7, height = 4)
+  par(mfrow = c(1, 2))
+  
+  plot(model, which = 1, main = paste("Residuals vs Fitted\n", title))
+  plot(model, which = 2, main = paste("Normal Q-Q\n", title))
+  
+  dev.off()
+}
+
+# Applica la funzione ai tuoi modelli
+plot_diagnostics(model_reduced, "resid_model_reduced.pdf", "Modello Ridotto")
+plot_diagnostics(model_quad, "resid_model_quad.pdf", "Modello Quadratico")
+plot_diagnostics(model_stepwise, "resid_model_stepwise.pdf", "Modello Stepwise")
+plot_diagnostics(model_step_interactions, "resid_model_interactions.pdf", "Modello Stepwise con Interazioni")

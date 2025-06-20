@@ -1,0 +1,41 @@
+\section{Scelta del modello}
+Si riportano i valori di $R^2$ e AIC dei quattro modelli.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Modello} & \boldmath$R^2$ & \textbf{AIC} \\
+		\hline
+		1 & 0.7803 & 514.69 \\
+		2 & 0.8769 & 460.76 \\
+		3 & 0.7859 & 514.11 \\
+		4 & 0.9128 & 448.27 \\
+		\hline
+	\end{tabular}
+	\caption{Valori di $R^2$ e AIC per i quattro modelli}
+\end{table}
+Di seguito vengono mostrati i test diagnostici ottenuti sui quattro modelli.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{../graphs/diagnostica/diagnostica_ridotto}
+
+	\label{fig:diagnosticaridotto}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{../graphs/diagnostica/diagnostica_quadrato}
+
+	\label{fig:diagnosticaridotto}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{../graphs/diagnostica/diagnostica_stepwise}
+
+	\label{fig:diagnosticaridotto}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{../graphs/diagnostica/diagnostica_stepwise_iterations}
+	\label{fig:diagnosticaridotto}
+	\caption{Residuals vs Fitted e Q-Q Residuals dei quattro modelli.}
+\end{figure}

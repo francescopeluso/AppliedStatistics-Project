@@ -277,7 +277,7 @@ model_quad <- lm(y_VideoQuality ~
 summary(model_quad)
 
 # Con l'introduzione di questi termini quadratici, notiamo come tutti i
-# coefficienti sono altamente significativi, poichè hanno p-value < 0.001 (***),
+# coefficienti sono altamente significativi, poichè hanno p-modvalue < 0.001 (***),
 # e che anche gli indici di Squared R e Adj. Squared R sono aumentati, mentre
 # il residual standard error sia diminuito da 12.8 a 9.68, con il p-value
 # complessivo del modello minore di 2.2*10^16.
@@ -320,7 +320,7 @@ BIC(model_full, model_reduced, model_quad, model_stepwise)
 # il modello (a partire da quello con i termini quadratici), andando ad
 # aggiungere le interazioni tra le possibili coppie di variabili indipendenti
 
-model_step_interactions <- lm(y_VideoQuality ~ (.)^2 + I(x5_CROP^2), data = data)
+model_step_interactions <- lm(y_VideoQuality ~ (.)^2 + I(x1_ISO^2)+ I(x2_FRatio^2)+I(x3_TIME^2)+I(x4_MP^2)+I(x5_CROP^2)+I(x6_FOCAL^2)+I(x7_PixDensity^2), data = data)
 model_step_interactions <- step(model_step_interactions, k=2)
 extractAIC(model_step_interactions)
 summary(model_step_interactions)

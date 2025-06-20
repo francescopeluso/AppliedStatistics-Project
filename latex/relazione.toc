@@ -4,6 +4,7 @@
 \contentsline {section}{\numberline {2}Analisi delle caratteristiche del dataset}{3}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Boxplot dei dati}{3}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Analisi di normalità}{4}{subsection.2.2}%
+<<<<<<< HEAD
 \contentsline {section}{\numberline {3}Analisi della dipendenza tra le variabili}{6}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Analisi di correlazione}{6}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Analisi di regressione}{7}{subsection.3.2}%
@@ -11,3 +12,11 @@
 \contentsline {subsection}{\numberline {4.1}Modello 1}{8}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Modello 2}{8}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Modello 3}{9}{subsection.4.3}%
+=======
+\contentsline {section}{\numberline {3}Analisi della dipendenza tra le variabili}{5}{section.3}%
+\contentsline {section}{\numberline {4}Analisi dei modelli}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Modello 1}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Modello 2}{6}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Modello 3}{7}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Modello 4}{8}{subsection.4.4}%
+>>>>>>> 3d5873bf6e5267ab8e439373e59921ea37db624c

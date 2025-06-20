@@ -7,3 +7,7 @@
 \contentsline {section}{\numberline {3}Analisi della dipendenza tra le variabili}{6}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Analisi di correlazione}{6}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Analisi di regressione}{7}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Analisi dei modelli}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Modello 1}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Modello 2}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Modello 3}{9}{subsection.4.3}%

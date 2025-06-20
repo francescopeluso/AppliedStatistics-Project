@@ -182,12 +182,21 @@ summary(fit8)
 
 #x3_TIME - tempo di esposizione
 dev.new()
-plot(data$x3_TIME,data$y_VideoQuality,xlab="x3_Time",ylab="y_VideoQuality")
-fit11 <- lm(y_VideoQuality ~ poly(x3_Time, 2, raw = TRUE), data = data)
+plot(data$x3_TIME,data$y_VideoQuality,xlab="x3_TIME",ylab="y_VideoQuality")
+fit11 <- lm(y_VideoQuality ~ poly(x3_TIME, 2, raw = TRUE), data = data)
 x_vals <- seq(min(data$x3_TIME), max(data$x3_TIME), length.out = 200)
 y_pred <- predict(fit11, newdata = data.frame(x3_TIME = x_vals))
 lines(x_vals, y_pred, col = "red", lwd = 2)
 summary(fit11)
+
+#x4_MP - megapixel sensore
+dev.new()
+plot(data$x4_MP,data$y_VideoQuality,xlab="x4_MP",ylab="y_VideoQuality")
+fit12 <- lm(y_VideoQuality ~ poly(x4_MP, 2, raw = TRUE), data = data)
+x_vals <- seq(min(data$x4_MP), max(data$x4_MP), length.out = 200)
+y_pred <- predict(fit12, newdata = data.frame(x4_MP = x_vals))
+lines(x_vals, y_pred, col = "red", lwd = 2)
+summary(fit12)
 
 #x5_CROP - crop factor
 dev.new()
@@ -197,6 +206,24 @@ x_vals <- seq(min(data$x5_CROP), max(data$x5_CROP), length.out = 200)
 y_pred <- predict(fit9, newdata = data.frame(x5_CROP = x_vals))
 lines(x_vals, y_pred, col = "red", lwd = 2)
 summary(fit9)
+
+#x6_FOCAL - focale
+dev.new()
+plot(data$x6_FOCAL,data$y_VideoQuality,xlab="x6_FOCAL",ylab="y_VideoQuality")
+fit13 <- lm(y_VideoQuality ~ poly(x6_FOCAL, 2, raw = TRUE), data = data)
+x_vals <- seq(min(data$x6_FOCAL), max(data$x6_FOCAL), length.out = 200)
+y_pred <- predict(fit13, newdata = data.frame(x6_FOCAL = x_vals))
+lines(x_vals, y_pred, col = "red", lwd = 2)
+summary(fit13)
+
+#x7_PixDensity - densità pixel
+dev.new()
+plot(data$x7_PixDensity,data$y_VideoQuality,xlab="x7_PixDensity",ylab="y_VideoQuality")
+fit14 <- lm(y_VideoQuality ~ poly(x7_PixDensity, 2, raw = TRUE), data = data)
+x_vals <- seq(min(data$x7_PixDensity), max(data$x7_PixDensity), length.out = 200)
+y_pred <- predict(fit14, newdata = data.frame(x7_PixDensity = x_vals))
+lines(x_vals, y_pred, col = "red", lwd = 2)
+summary(fit14)
 
 #x5_CROP - crop factor e x7_PixDensity
 dev.new()

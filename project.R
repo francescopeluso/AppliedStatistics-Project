@@ -276,6 +276,14 @@ model_quad <- lm(y_VideoQuality ~
                  data = data)
 summary(model_quad)
 
+model_quad_exp <- lm(exp(y_VideoQuality) ~ 
+                   x1_ISO + I(x1_ISO^2) +
+                   x2_FRatio + I(x2_FRatio^2) +
+                   x3_TIME + x5_CROP,
+                 data = data)
+summary(model_quad_exp)
+
+
 # Con l'introduzione di questi termini quadratici, notiamo come tutti i
 # coefficienti sono altamente significativi, poichè hanno p-modvalue < 0.001 (***),
 # e che anche gli indici di Squared R e Adj. Squared R sono aumentati, mentre
@@ -415,6 +423,12 @@ par(mfrow=c(2,2))
 plot(model_step_interactions, main = "modello 4")
 dev.print(device=pdf,"diagLin5.pdf")
 
+
+summary(model_quad_exp)
+dev.new(width = 550, height = 330, unit = "px")
+par(mfrow=c(2,2))
+plot(model_quad_exp, main = "modello 6")
+dev.print(device=pdf,"diagLin6.pdf")
 
 # ------------------------------------------------------------------------------
 # PUNTO 6:

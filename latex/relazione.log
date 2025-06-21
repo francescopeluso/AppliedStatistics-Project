@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.7)  21 JUN 2025 19:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.7)  21 JUN 2025 20:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -612,49 +612,57 @@ Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 79.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [11] (SceltaModello.tex
-<../graphs/diagnostica/diagnostica_ridotto.png, id=167, 499.8675pt x 251.43938p
-t>
+<../graphs/diagnostica/diagnostica_ridotto.png, id=167, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/diagnostica_ridotto.png Graphic file (type png)
 <use ../graphs/diagnostica/diagnostica_ridotto.png>
 Package pdftex.def Info: ../graphs/diagnostica/diagnostica_ridotto.png  used on
  input line 20.
-(pdftex.def)             Requested size: 455.24411pt x 229.00201pt.
-<../graphs/diagnostica/diagnostica_quadrato.png, id=168, 499.8675pt x 254.45062
-pt>
+(pdftex.def)             Requested size: 432.48051pt x 432.49132pt.
+<../graphs/diagnostica/diagnostica_quadrato.png, id=168, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/diagnostica_quadrato.png Graphic file (type png)
 <use ../graphs/diagnostica/diagnostica_quadrato.png>
 Package pdftex.def Info: ../graphs/diagnostica/diagnostica_quadrato.png  used o
-n input line 26.
-(pdftex.def)             Requested size: 455.24411pt x 231.74455pt.
-<../graphs/diagnostica/diagnostica_stepwise.png, id=169, 499.8675pt x 255.20343
-pt>
+n input line 25.
+(pdftex.def)             Requested size: 432.48051pt x 432.49132pt.
+<../graphs/diagnostica/diagnostica_stepwise.png, id=169, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/diagnostica_stepwise.png Graphic file (type png)
 <use ../graphs/diagnostica/diagnostica_stepwise.png>
 Package pdftex.def Info: ../graphs/diagnostica/diagnostica_stepwise.png  used o
-n input line 32.
-(pdftex.def)             Requested size: 455.24411pt x 232.43018pt.
-<../graphs/diagnostica/diagnostica_stepwise_iterations.png, id=170, 499.8675pt 
-x 254.45062pt>
+n input line 30.
+(pdftex.def)             Requested size: 432.48051pt x 432.49132pt.
+File: _assets/logo-universita-bn.png Graphic file (type png)
+<use _assets/logo-universita-bn.png>
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 32.
+
+(pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
+ [12 <../graphs/diagnostica/diagnostica_ridotto.png>]
+<../graphs/diagnostica/diagnostica_stepwise_iterations.png, id=179, 666.49pt x 
+666.49pt>
 File: ../graphs/diagnostica/diagnostica_stepwise_iterations.png Graphic file (t
 ype png)
 <use ../graphs/diagnostica/diagnostica_stepwise_iterations.png>
 Package pdftex.def Info: ../graphs/diagnostica/diagnostica_stepwise_iterations.
-png  used on input line 38.
-(pdftex.def)             Requested size: 455.24411pt x 231.74455pt.
+png  used on input line 35.
+(pdftex.def)             Requested size: 432.48051pt x 432.49132pt.
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
-Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 41.
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 38.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
- [12 <../graphs/diagnostica/diagnostica_ridotto.png> <../graphs/diagnostica/dia
-gnostica_quadrato.png>])
+ [13 <../graphs/diagnostica/diagnostica_quadrato.png>]
+File: _assets/logo-universita-bn.png Graphic file (type png)
+<use _assets/logo-universita-bn.png>
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 39.
+
+(pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
+ [14 <../graphs/diagnostica/diagnostica_stepwise.png>])
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
 Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 83.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
- [13 <../graphs/diagnostica/diagnostica_stepwise.png> <../graphs/diagnostica/di
-agnostica_stepwise_iterations.png>] (relazione.aux)
+ [15 <../graphs/diagnostica/diagnostica_stepwise_iterations.png>] (relazione.au
+x)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -667,8 +675,8 @@ Package rerunfilecheck Info: File `relazione.out' has not changed.
 (rerunfilecheck)             Checksum: E85C06A005714CEBD9A9A9FD880D3A3D;2097.
  ) 
 Here is how much of TeX's memory you used:
- 12059 strings out of 474485
- 189035 string characters out of 5761557
+ 12061 strings out of 474485
+ 189049 string characters out of 5761557
  1950542 words of memory out of 5000000
  34102 multiletter control sequences out of 15000+600000
  574821 words of font info for 72 fonts, out of 8000000 for 9000
@@ -691,9 +699,9 @@ IK/fonts/type1/public/amsfonts/cm/cmbx8.pfb><D:/MIK/fonts/type1/public/amsfonts
 /cm/cmmi12.pfb><D:/MIK/fonts/type1/public/amsfonts/cm/cmmib10.pfb><D:/MIK/fonts
 /type1/public/amsfonts/cm/cmr12.pfb><D:/MIK/fonts/type1/public/amsfonts/cm/cmr8
 .pfb><D:/MIK/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on relazione.pdf (14 pages, 504068 bytes).
+Output written on relazione.pdf (16 pages, 527735 bytes).
 PDF statistics:
- 593 PDF objects out of 1000 (max. 8388607)
- 48 named destinations out of 1000 (max. 500000)
+ 602 PDF objects out of 1000 (max. 8388607)
+ 50 named destinations out of 1000 (max. 500000)
  160 words of extra memory for PDF output out of 10000 (max. 10000000)
 

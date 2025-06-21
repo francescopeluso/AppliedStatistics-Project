@@ -17,28 +17,31 @@ Si riportano i valori di $R^2$ e AIC dei quattro modelli.
 Di seguito vengono mostrati i grafici diagnostici ottenuti sui quattro modelli.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\linewidth]{../graphs/diagnostica/diagnostica_ridotto}
-
+	\includegraphics[width=0.95\linewidth]{../graphs/diagnostica/diagnostica_ridotto}
 	\label{fig:diagnosticaridotto}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\linewidth]{../graphs/diagnostica/diagnostica_quadrato}
-
+	\includegraphics[width=0.95\linewidth]{../graphs/diagnostica/diagnostica_quadrato}
 	\label{fig:diagnosticaridotto}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\linewidth]{../graphs/diagnostica/diagnostica_stepwise}
-
+	\includegraphics[width=0.95\linewidth]{../graphs/diagnostica/diagnostica_stepwise}
 	\label{fig:diagnosticaridotto}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\linewidth]{../graphs/diagnostica/diagnostica_stepwise_iterations}
+	\includegraphics[width=0.95\linewidth]{../graphs/diagnostica/diagnostica_stepwise_iterations}
 	\label{fig:diagnosticaridotto}
 	\caption{Residuals vs Fitted e Q-Q Residuals dei quattro modelli.}
 \end{figure}
-Osservando i grafici 
+Osservando i grafici 'Residuals vs Fitted' si nota che solo nei modelli 2 e 4, la linea rossa non presenta alcun pattern soddisfando in buona maniera l'ipotesi di linearità. Inoltre, sempre i modelli 2 e 4 nei grafici 'Q-Q Residuals' l'ipotesi di normalità è soddisfatta. 
+
+Si osservi (dal grafico 'Scale-Location') che però su nessuno dei modelli considerati si può supporre che la varianza sia costante.
+
+Infine comparando i valori di adjusted $R^2$ e AIC, il modello 4 sarebbe da preferire. Infatti, usando l'AIC, si sceglie il modello che ha valore minore; un valore maggiore di $R^2$ implica che il modello è in grado di interpretare meglio il fenomeno osservato.
+
+A fronte dei dati ricavati si è stimato che il modello che meglio rappresenta il dataset fornito è il modello 4.
 
 

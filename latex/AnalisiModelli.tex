@@ -1,5 +1,6 @@
 \section{Analisi dei modelli}
-In questa sezione si analizzeranno differenti modelli e successivamente si confronteranno i modelli usando l'AIC e dai risultati ottenuti dai test diagnostici.
+In questa sezione si analizzeranno differenti modelli e successivamente li si confronteranno verificando quale dei modelli meglio soddisfa l'ipotesi di normalità dei residui tramite dei grafici e test diagnostici. Inoltre, dato il numero non elevato di campioni si confronteranno i valori di AIC e di adjusted-$R^2$.
+
 
 \subsection{Modello 1}
 Il primo modello analizzato è quello che include i regressori (di primo grado) più significativi (in base al valore di p\_value misurato precedentemente). Ovvero:
@@ -42,9 +43,9 @@ Gli intervalli di confidenza al $5\%$, ottenuti tramite il metodo confint() di R
 	\label{tab:ci_coefficienti}
 \end{table}
 
-I valori di $R^2$ e AIC ottenuti sono:
+I valori dell'adjusted $R^2$  e AIC ottenuti sono:
 \begin{equation*}
-	R^2 = 0.7803, \quad AIC = 514.69.
+	R^2 =  0.77, \quad AIC = 514.69.
 \end{equation*}
 \subsection{Modello 2}
 Il prossimo modello analizzato è quello ottenuto aggiungendo tutti i regressori più significativi con l'aggiunta di alcuni regressori al quadrato.
@@ -91,9 +92,9 @@ Gli intervalli di confidenza al $5\%$, ottenuti tramite il metodo confint() di R
 	\label{tab:ci_coefficienti}
 \end{table}
 
-I valori di $R^2$ e AIC ottenuti sono:
+I valori dell'adjusted $R^2$  e AIC ottenuti sono:
 \begin{equation*}
-	R^2 =   0.8769, \quad AIC = 460.7592.
+	R^2 =   0.87, \quad AIC = 460.76.
 \end{equation*}
 \subsection{Modello 3}
 Questo modello è ottenuto tramite la funzione step() di R eliminando i regressori non significativi, a partire dal modello contenente tutti i regressori di primo grado. Il modello ottenuto è:
@@ -136,9 +137,9 @@ Gli intervalli di confidenza al $5\%$, ottenuti tramite il metodo confint() di R
 	\caption{Intervalli di confidenza al 95\% per i coefficienti del modello}
 	\label{tab:ci_coefficienti}
 \end{table}
-I valori di $R^2$ e AIC ottenuti sono:
+I valori dell'adjusted $R^2$  e AIC ottenuti sono:
 \begin{equation*}
-	R^2 =    0.7859, \quad AIC =  514.11325.
+	R^2 =    0.77, \quad AIC =  514.11.
 \end{equation*}
 \subsection{Modello 4}
 L'ultimo modello analizzato, è ottenuto tramite la seguente istruzione R, adottando la funzione step():
@@ -217,8 +218,8 @@ Gli intervalli di confidenza al $5\%$, ottenuti tramite il metodo confint() di R
 	\caption{Intervalli di confidenza al 95\% per i coefficienti del modello}
 	\label{tab:ci_coefficienti}
 \end{table}
-I valori di $R^2$ e AIC ottenuti sono:
+I valori dell'adjusted $R^2$  e AIC ottenuti sono:
 \begin{equation*}
-	R^2 =     0.9128, \quad AIC=448.27.
+	R^2 =      0.89, \quad AIC=448.27.
 \end{equation*}
 

@@ -288,13 +288,7 @@ summary(model_quad)
 extractAIC(model_full)
 extractAIC(model_reduced)
 extractAIC(model_quad)
-BIC(model_full, model_reduced, model_quad)
 
-#rss <- sum(residuals(model_full)^2); rss
-#n <- length(model_full$fitted.values)
-#k <- length(coef(model_full))  # include intercetta
-#AIC_manual <- n * log(rss / n) + 2 * k
-#extractAIC(model_full)
 
 # In effetti, entrambi i confronti ci confermano che l'ultimo modello costruito,
 # ovvero quello con i termini quadratici, sia il migliore.
@@ -309,19 +303,18 @@ BIC(model_full, model_reduced, model_quad)
 model_stepwise <- step(model_full, direction = "both", trace = 1)
 summary(model_stepwise)  # risultato AIC = 514*
 
-# Confronto AIC/BIC tra tutti i modelli
+# Confronto AIC tra tutti i modelli
 extractAIC(model_full)
 extractAIC(model_reduced)
 extractAIC(model_quad)
 extractAIC(model_stepwise) 
-BIC(model_full, model_reduced, model_quad, model_stepwise)
 
 # Proviamo adesso, con un metodo stepwise, a vedere se è possibile migliorare
 # il modello (a partire da quello con i termini quadratici), andando ad
 # aggiungere le interazioni tra le possibili coppie di variabili indipendenti
 
 model_step_interactions <- lm(y_VideoQuality ~ (.)^2 + I(x1_ISO^2)+ I(x2_FRatio^2)+I(x3_TIME^2)+I(x4_MP^2)+I(x5_CROP^2)+I(x6_FOCAL^2)+I(x7_PixDensity^2), data = data)
-model_step_interactions <- step(model_step_interactions, k=2)
+model_step_interactions <- step(model_step_interactions, k=log(100))
 extractAIC(model_step_interactions)
 summary(model_step_interactions)
 
@@ -330,13 +323,13 @@ extractAIC(model_reduced)
 extractAIC(model_quad)
 extractAIC(model_stepwise)
 extractAIC(model_step_interactions)
-BIC(model_full, model_reduced, model_quad, model_stepwise, model_step_interactions)
 
-# In seguito alle analisi effettuate, dunque, il miglior modello, secondo il
-# confronto AIC e BIC, sembra essere quello costruito come:
-#
-# y = beta0 + beta1*x1 + beta2*x1^2 + beta3*x2 + beta4*x2^2 + beta5*x3 + beta6*x5 + e
-# (dove il termine 'e' sarebbe il termine di errore, e beta0 l'intercetta)
+#modello cubico
+
+model_step_cubic <- lm(y_VideoQuality ~ (.)^2 + I(x1_ISO^2)+ I(x2_FRatio^2)+I(x3_TIME^2)+I(x4_MP^2)+I(x5_CROP^2)+I(x6_FOCAL^2)+I(x7_PixDensity^2) + (.)^3, data=data)
+model_step_cubic <- step(model_step_cubic, k=2)
+summary(model_step_cubic)
+
 
 # Confrontiamo anche graficamente i nostri modelli di regressione multipla
 
@@ -392,9 +385,6 @@ legend("topleft", c("Quadratico", "Completo", "Stepwise"),
 # multipla
 # ------------------------------------------------------------------------------
 
-
-
-
 summary(model_full)
 dev.new(width = 550, height = 330, unit = "px")
 par(mfrow=c(2,2))
@@ -415,29 +405,44 @@ dev.print(device=pdf,"diagLin3.pdf")
 
 summary(model_stepwise)
 dev.new(width = 550, height = 330, unit = "px")
-par(mfrow=c(1,2))
+par(mfrow=c(2,2))
 plot(model_stepwise, main = "modello 3")
 dev.print(device=pdf,"diagLin4.pdf")
 
 summary(model_step_interactions)
 dev.new(width = 550, height = 330, unit = "px")
-par(mfrow=c(1,2))
+par(mfrow=c(2,2))
 plot(model_step_interactions, main = "modello 4")
 dev.print(device=pdf,"diagLin5.pdf")
 
 
-plot_diagnostics <- function(model, filename, title) {
-  pdf(filename, width = 7, height = 4)
-  par(mfrow = c(1, 2))
-  
-  plot(model, which = 1, main = paste("Residuals vs Fitted\n", title))
-  plot(model, which = 2, main = paste("Normal Q-Q\n", title))
-  
-  dev.off()
-}
+# ------------------------------------------------------------------------------
+# PUNTO 6:
+# Analisi di normalità dei residui
+# ------------------------------------------------------------------------------
 
-# Applica la funzione ai tuoi modelli
-plot_diagnostics(model_reduced, "resid_model_reduced.pdf", "Modello Ridotto")
-plot_diagnostics(model_quad, "resid_model_quad.pdf", "Modello Quadratico")
-plot_diagnostics(model_stepwise, "resid_model_stepwise.pdf", "Modello Stepwise")
-plot_diagnostics(model_step_interactions, "resid_model_interactions.pdf", "Modello Stepwise con Interazioni")
+# 1. model_reduced
+residui_model_reduced <- residuals(model_reduced)
+
+shapiro.test(residui_model_reduced)
+
+# 2. model_quad
+residui_model_quad <- residuals(model_quad)
+
+shapiro.test(residui_model_quad)
+
+# 3. model_stepwise
+residui_model_stepwise <- residuals(model_stepwise)
+
+shapiro.test(residui_model_stepwise)
+
+# 4. model_step_interactions
+residui_model_step_interactions <- residuals(model_step_interactions)
+
+shapiro.test(residui_model_step_interactions)
+
+
+
+
+
+

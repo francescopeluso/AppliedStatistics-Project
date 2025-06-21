@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.7)  20 JUN 2025 15:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.7)  21 JUN 2025 19:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -585,24 +585,24 @@ Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 77.
  [7] (AnalisiModelli.tex
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
-Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 73.
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 74.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [8]
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
-Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 139
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 140
 .
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [9]
-Overfull \hbox (13.94131pt too wide) in paragraph at lines 159--159
+Overfull \hbox (13.94131pt too wide) in paragraph at lines 160--160
 [] \T1/cmtt/m/n/12 I(x2_FRatio^2) + I(x3_TIME^2) + I(x4_MP^2) + I(x5_CROP^2) + 
 I(x6_FOCAL^2) +[] 
  []
 
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
-Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 220
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 221
 .
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
 [10])
@@ -691,9 +691,9 @@ IK/fonts/type1/public/amsfonts/cm/cmbx8.pfb><D:/MIK/fonts/type1/public/amsfonts
 /cm/cmmi12.pfb><D:/MIK/fonts/type1/public/amsfonts/cm/cmmib10.pfb><D:/MIK/fonts
 /type1/public/amsfonts/cm/cmr12.pfb><D:/MIK/fonts/type1/public/amsfonts/cm/cmr8
 .pfb><D:/MIK/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on relazione.pdf (14 pages, 502899 bytes).
+Output written on relazione.pdf (14 pages, 504068 bytes).
 PDF statistics:
- 590 PDF objects out of 1000 (max. 8388607)
+ 593 PDF objects out of 1000 (max. 8388607)
  48 named destinations out of 1000 (max. 500000)
  160 words of extra memory for PDF output out of 10000 (max. 10000000)
 

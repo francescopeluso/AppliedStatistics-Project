@@ -97,7 +97,7 @@ library(ggplot2)
 library("GGally")
 ggpairs(data, upper = list(continuous = "blank"))   # nasconde i grafici sotto la diagonale
 #
-CorrPlot
+#CorrPlot
 library("corrplot")
 corrplot.mixed(cor(data),number.cex=0.8,tl.cex=0.8)
 

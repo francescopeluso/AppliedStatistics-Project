@@ -180,14 +180,67 @@ I valori dell'adjusted $R^2$  e AIC ottenuti sono:
 \end{equation*}
 
 \subsection{Modello 4}
-Questo modello è stato ottenuto riducendo il Modello 3
+Questo modello è stato ottenuto riducendo il Modello 3, in particolare escludendo le variabili $x_4$ e $x_6$ apparentemente poco significative. Si presenta come:
+
+\begin{align*}
+	y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \beta_3x_3 + \beta_4x_5 + \beta_5x_7 + \beta_6x_1^2 + \beta_7x_2^2 + \beta_8x_3x_5
+\end{align*}
+
+
+La stima dei parametri ottenuti per questo modello è:
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Parametro} & \textbf{Stima} & \textbf{Dev. Std.} \\
+		\hline
+		$\beta_0$   & 80.00  & 1.86 \\
+		$\beta_1$   & -8.19  & 1.00 \\
+		$\beta_2$   & -13.59 & 0.90 \\
+		$\beta_3$   & 4.73   & 0.96 \\
+		$\beta_4$   & -13.22  & 0.92 \\
+		$\beta_5$   & -2.91 & 0.94 \\
+		$\beta_6$   & -8.31   & 1.18 \\
+		$\beta_7$   & -6.26  & 1.04 \\
+		$\beta_8$   & 1.89  & 0.94 \\
+		\hline
+	\end{tabular}
+	\caption{Stime dei coefficienti e deviazioni standard del modello}
+	\label{tab:stima_coef_std}
+\end{table}
+Gli intervalli di confidenza al $5\%$, ottenuti tramite il metodo confint() di R, sono:
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Parametro} & \textbf{Lower bound} & \textbf{Upper bound} \\
+		\hline
+		$\beta_0$   & 76.31  & 83.69 \\
+		$\beta_1$   & -10.18 & -6.19 \\
+		$\beta_2$   & -15.38 & -11.80 \\
+		$\beta_3$   & 2.82   & 6.64 \\
+		$\beta_4$   & -15.04  & -11.39 \\
+		$\beta_5$   & -4.77 & -1.05 \\
+		$\beta_6$   & -10.65  & -5.97 \\
+		$\beta_7$   & -8.32  & -4.21 \\
+		$\beta_8$   & 0.02 & 3.75 \\
+		\hline
+	\end{tabular}
+	\caption{Intervalli di confidenza al 95\% per i coefficienti del modello}
+	\label{tab:ci_coefficienti}
+\end{table}
+I valori dell'adjusted $R^2$  e AIC ottenuti sono:
+\begin{equation*}
+	R^2 =      0.88, \quad AIC=451.56.
+\end{equation*}
 
 
 \subsection{Modello 5}
 Questo modello è stato ottenuto analizzando anche i termini cubici. In particolare, il modello si presenta nel seguente modo:
 
 \begin{align*}
-	y= \beta_0 + \beta_1x_1 + \beta_2x_2 + \beta_3x_3 + \beta_4x_5 + \beta_5x_6 + \beta_6x_7 + \beta_7x_1^2 + \beta_8x_2^2 + \beta_9x_6^2 + \beta_{10}x_1^3 + \beta_{11}x_7^3 + \beta_{12}x_1x_7 + \beta_{13}x_3x_5 + \beta_{14}x_3x_7
+	y &= \beta_0 + \beta_1x_1 + \beta_2x_2 + \beta_3x_3 + \beta_4x_5 + \beta_5x_6 + \beta_6x_7 + \beta_7x_1^2 + \beta_8x_2^2 + \beta_9x_6^2 + \beta_{10}x_1^3 + \beta_{11}x_7^3 \\
+	&+ \beta_{12}x_1x_7 + \beta_{13}x_3x_5 + \beta_{14}x_3x_7
 \end{align*}
 
 La stima dei parametri ottenuti per questo modello è:

@@ -9,8 +9,8 @@
 # Impostazione path cartella progetto (N.B. cambia a seconda di chi usa il file)
 #setwd('~/GitHub Repos/AppliedStatistics-Project')     # path Francesco
 #setwd('C:/Users/anuar/AppliedStatistics-Project')     # path Anuar
-#setwd('/Users/corry/AppliedStatistics-Project')     # path Corrado
-setwd('C:/Users/ACER/Desktop/GitHub/AppliedStatistics-Project')     # path Gerardo
+setwd('/Users/corry/progetto/AppliedStatistics-Project')     # path Corrado
+#setwd('C:/Users/ACER/Desktop/GitHub/AppliedStatistics-Project')     # path Gerardo
 
 # ------------------------------------------------------------------------------
 
@@ -98,8 +98,8 @@ library("GGally")
 ggpairs(data, upper = list(continuous = "blank"))   # nasconde i grafici sotto la diagonale
 
 #CorrPlot
-library("corrplot")
-corrplot.mixed(cor(data),number.cex=0.8,tl.cex=0.8)
+#library("corrplot")
+#corrplot.mixed(cor(data),number.cex=0.8,tl.cex=0.8)
 
 #matrice dei coefficienti di correlazione
 cor(data)
@@ -368,7 +368,7 @@ par(mfrow=c(2,2))
 plot(model_full, main = "Diagnostica - Modello completo")
 dev.print(device=pdf,"diag_model_full.pdf")
 
-# Modello ridotto
+# Modello ridotto (1) 
 summary(model_reduced)
 confint(model_reduced, level = 0.95)
 confint(model_reduced, level = 0.90)
@@ -377,7 +377,7 @@ par(mfrow=c(2,2))
 plot(model_reduced, main = "Diagnostica - Modello 1")
 dev.print(device=pdf,"diag_model_reduced.pdf")
 
-# Modello quadratico
+# Modello quadratico (2) 
 summary(model_quad)
 confint(model_quad, level = 0.95)
 confint(model_quad, level = 0.90)
@@ -387,7 +387,7 @@ plot(model_quad, main = "Diagnostica - Modello 2")
 dev.print(device=pdf,"diag_model_quad.pdf")
 
 
-# Modello con interazioni
+# Modello con interazioni (3)
 summary(model_step_interactions)
 confint(model_step_interactions, level = 0.95)
 confint(model_step_interactions, level = 0.90)
@@ -396,7 +396,7 @@ par(mfrow=c(2,2))
 plot(model_step_interactions, main = "Diagnostica - Modello interazioni")
 dev.print(device=pdf,"diag_model_step_interactions.pdf")
 
-# Modello con interazioni ridotto
+# Modello con interazioni ridotto (4)
 summary(model_step_interactions_reduced)
 confint(model_step_interactions_reduced, level = 0.95)
 confint(model_step_interactions_reduced, level = 0.90)
@@ -405,7 +405,7 @@ par(mfrow=c(2,2))
 plot(model_step_interactions_reduced, main = "Diagnostica - Modello interazioni ridotto")
 dev.print(device=pdf,"diag_model_step_interactions_reduced.pdf")
 
-# Modello cubico (finale)
+# Modello cubico (5-finale)
 summary(model_cubic_step)
 confint(model_cubic_step, level = 0.95)
 confint(model_cubic_step, level = 0.90)
@@ -428,13 +428,15 @@ shapiro.test(residui_model_reduced)
 residui_model_quad <- residuals(model_quad)
 shapiro.test(residui_model_quad)
 
-# 3. Modello stepwise
-residui_model_stepwise <- residuals(model_stepwise)
-shapiro.test(residui_model_stepwise)
-
-# 4. Modello con interazioni e quadrati
+# 3. Modello con interazioni e quadrati
 residui_model_step_interactions <- residuals(model_step_interactions)
 shapiro.test(residui_model_step_interactions)
+
+
+# 4. Modello con interazioni ridotto
+residui_model_step_interactions_reduced <- residuals(model_step_interactions_reduced)
+shapiro.test(residui_model_step_interactions_reduced)
+
 
 # 5. Modello finale scelto: cubico + interazioni lineari
 residui_model_cubic <- residuals(model_cubic_step)

@@ -2,39 +2,47 @@
 Si riportano i valori di $R^2$ e AIC dei quattro modelli.
 \begin{table}[H]
 	\centering
-	\begin{tabular}{|c|c|c|}
+	\begin{tabular}{|c|c|c|c|}
 		\hline
-		\textbf{Modello} & \textbf{adjusted} \boldmath$R^2$ & \textbf{AIC} \\
+		\textbf{Modello} & \textbf{adjusted} \boldmath$R^2$ & \textbf{AIC} & \textbf{MSE}\\
 		\hline
-		1 &  0.77  & 514.69 \\
-		2 & 0.87 & 460.76 \\
-		3 & 0.77 & 514.11 \\
-		4 & 0.89 & 448.27 \\
+		1 &  0.77  & 514.69 & 155.54\\
+		2 & 0.87 & 460.76 & 87.16\\
+		3 & 0.89 & 448.27 & 61.72\\
+		4 & 0.88 & 451.67 & 76.45\\
+		5 & 0.91 & 431.91 & 55.65254 \\
 		\hline
 	\end{tabular}
 	\caption{Valori di $R^2$ e AIC per i quattro modelli}
 \end{table}
-\textbf{Osservazione.} È opportuno considerare che, nella scelta del modello, si è tenuto conto dell’elevata correlazione lineare osservata tra alcune variabili predittive, in particolare tra \textbf{x4\_MP} e \textbf{x7\_PixDensity} (correlazione pari a 0.743). \\ 
-   Un’alta correlazione tra predittori può infatti dar luogo a fenomeni di \emph{multicollinearità}, ossia a situazioni in cui alcune variabili esplicative risultano linearmente dipendenti o quasi dipendenti. Ciò comporta una riduzione del rango della matrice del disegno (\emph{design matrix}), con conseguenti stime instabili dei coefficienti, varianze elevate e difficoltà nell’interpretazione individuale degli effetti delle singole variabili.
+\textbf{Osservazione.} È opportuno considerare che, nella scelta del modello, si è tenuto conto della discreta correlazione lineare osservata tra alcune variabili predittive, in particolare tra \textbf{x4\_MP} e \textbf{x7\_PixDensity} (correlazione pari a 0.743). \\ 
+   Un’alta correlazione tra predittori può infatti dar luogo a fenomeni di \emph{multicollinearità}, ossia a situazioni in cui alcune variabili esplicative risultano linearmente dipendenti o quasi dipendenti. Ciò comporta una riduzione del rango della matrice di (\emph{design}), con conseguenti stime instabili dei coefficienti, varianze elevate e difficoltà nell’interpretazione individuale degli effetti delle singole variabili.
+   
 Di seguito vengono mostrati i grafici diagnostici ottenuti sui quattro modelli.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.95\linewidth]{../graphs/diagnostica/diagnostica_ridotto}
+	\includegraphics[width=0.75\linewidth]{../graphs/diagnostica/diagnostica_ridotto}
 	\label{fig:diagnosticaridotto}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.95\linewidth]{../graphs/diagnostica/diagnostica_quadrato}
-	\label{fig:diagnosticaridotto}
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../graphs/diagnostica/diagnostica_quadrato}
+		\caption{Diagnostica modello quadratico}
+		\label{fig:diagnostica_quadrato}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../graphs/diagnostica/diagnostica_stepwise}
+		\caption{Diagnostica modello stepwise}
+		\label{fig:diagnostica_stepwise}
+	\end{minipage}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.95\linewidth]{../graphs/diagnostica/diagnostica_stepwise}
-	\label{fig:diagnosticaridotto}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\linewidth]{../graphs/diagnostica/diagnostica_stepwise_iterations}
+	\includegraphics[width=0.75\linewidth]{../graphs/diagnostica/diagnostica_stepwise_iterations}
 	\label{fig:diagnosticaridotto}
 	\caption{Residuals vs Fitted e Q-Q Residuals dei quattro modelli.}
 \end{figure}

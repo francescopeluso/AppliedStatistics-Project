@@ -7,7 +7,7 @@
 # ------------------------------------------------------------------------------
 
 # Impostazione path cartella progetto (N.B. cambia a seconda di chi usa il file)
-setwd('~/GitHub Repos/AppliedStatistics-Project')     # path Francesco
+#setwd('~/GitHub Repos/AppliedStatistics-Project')     # path Francesco
 #setwd('C:/Users/anuar/AppliedStatistics-Project')     # path Anuar
 #setwd('/Users/corry/AppliedStatistics-Project')     # path Corrado
 #setwd('C:/Users/ACER/Desktop/GitHub/AppliedStatistics-Project')     # path Gerardo
@@ -339,10 +339,11 @@ extractAIC(model_step_interactions_reduced)
 model_cubic <- lm(
   y_VideoQuality ~ 
     (x1_ISO + x2_FRatio + x3_TIME + x5_CROP + x6_FOCAL + x7_PixDensity)^2 +
-    I(x1_ISO^2) + I(x2_FRatio^2) + I(x3_TIME^2) + I(x5_CROP^2) + I(x6_FOCAL^2) + I(x7_PixDensity^2) +
+    I(x1_ISO^2) + I(x2_FRatio^2) + I(x3_TIME^2) + I(x5_CROP^2)+ I(x5_CROP^2) + I(x6_FOCAL^2) + I(x7_PixDensity^2) +
     I(x1_ISO^3) + I(x2_FRatio^3) + I(x3_TIME^3) + I(x5_CROP^3) + I(x6_FOCAL^3) + I(x7_PixDensity^3),
   data = data
 )
+
 model_cubic_step <- step(model_cubic, k = 2)
 summary(model_cubic_step)
 extractAIC(model_cubic_step)
@@ -373,7 +374,7 @@ confint(model_reduced, level = 0.95)
 confint(model_reduced, level = 0.90)
 dev.new(width = 550, height = 330, unit = "px")
 par(mfrow=c(2,2))
-plot(model_reduced, main = "Diagnostica - Modello ridotto")
+plot(model_reduced, main = "Diagnostica - Modello 1")
 dev.print(device=pdf,"diag_model_reduced.pdf")
 
 # Modello quadratico
@@ -382,17 +383,9 @@ confint(model_quad, level = 0.95)
 confint(model_quad, level = 0.90)
 dev.new(width = 550, height = 330, unit = "px")
 par(mfrow=c(2,2))
-plot(model_quad, main = "Diagnostica - Modello quadratico")
+plot(model_quad, main = "Diagnostica - Modello 2")
 dev.print(device=pdf,"diag_model_quad.pdf")
 
-# Modello stepwise
-summary(model_stepwise)
-confint(model_stepwise, level = 0.95)
-confint(model_stepwise, level = 0.90)
-dev.new(width = 550, height = 330, unit = "px")
-par(mfrow=c(2,2))
-plot(model_stepwise, main = "Diagnostica - Modello stepwise")
-dev.print(device=pdf,"diag_model_stepwise.pdf")
 
 # Modello con interazioni
 summary(model_step_interactions)

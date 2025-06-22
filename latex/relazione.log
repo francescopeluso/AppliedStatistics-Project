@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.7)  22 JUN 2025 10:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.7)  22 JUN 2025 10:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -367,13 +367,34 @@ LaTeX Warning: Label `tab:' multiply defined.
 LaTeX Warning: Label `tab:ci_coefficienti' multiply defined.
 
 
-LaTeX Warning: Label `tab:coef_estimates_poly' multiply defined.
+LaTeX Warning: Label `tab:ci_coefficienti' multiply defined.
+
+
+LaTeX Warning: Label `tab:stima_coef_std' multiply defined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 <
+      <<<<<< HEAD
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
 LaTeX Warning: Label `tab:ci_coefficienti' multiply defined.
 
 
-LaTeX Warning: Label `tab:ci_coefficienti' multiply defined.
+LaTeX Warning: Label `fig:diagnosticaridotto' multiply defined.
+
+
+LaTeX Warning: Label `fig:diagnosticaridotto' multiply defined.
+
+
+LaTeX Warning: Label `fig:diagnosticaridotto' multiply defined.
 
 )
 \openout1 = `relazione.aux'.
@@ -397,6 +418,11 @@ LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
  (D:\MIK\tex/context/base/mkii\supp-pdf.mkii
+Overfull \hbox (35.16994pt too wide) in paragraph at lines 66--13
+[]\T1/cmr/m/n/12 <<<<<<< HEAD                =======               >>>>>>> 0ef4
+de25332bda7dde8eaee18791271845b8495f 
+ []
+
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count299
 \scratchdimen=\dimen169
@@ -459,21 +485,34 @@ Package hyperref Info: Link coloring ON on input line 35.
 \@outlinefile=\write3
 \openout3 = `relazione.out'.
 
-<_assets/logo-dipartimento.png, id=55, 205.76875pt x 81.30376pt>
-File: _assets/logo-dipartimento.png Graphic file (type png)
-<use _assets/logo-dipartimento.png>
-Package pdftex.def Info: _assets/logo-dipartimento.png  used on input line 43.
-(pdftex.def)             Requested size: 113.81102pt x 44.96902pt.
-<_assets/logo-universita-bn.png, id=56, 351.3125pt x 351.3125pt>
+<_assets/logo-universita-bn.png, id=59, 351.3125pt x 351.3125pt>
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
-Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 67.
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 38.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [1
 
 {C:/Users/anuar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./_assets/lo
-go-universita-bn.png> <./_assets/logo-dipartimento.png>] (relazione.toc)
+go-universita-bn.png>]
+<_assets/logo-dipartimento.png, id=68, 205.76875pt x 81.30376pt>
+File: _assets/logo-dipartimento.png Graphic file (type png)
+<use _assets/logo-dipartimento.png>
+Package pdftex.def Info: _assets/logo-dipartimento.png  used on input line 43.
+(pdftex.def)             Requested size: 113.81102pt x 44.96902pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.67 \end{titlepage}
+                    
+File: _assets/logo-universita-bn.png Graphic file (type png)
+<use _assets/logo-universita-bn.png>
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 67.
+
+(pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
+ [1 <./_assets/logo-dipartimento.png>] (relazione.toc)
 \tf@toc=\write4
 \openout4 = `relazione.toc'.
 
@@ -502,7 +541,7 @@ Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 73.
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
 
 [2] (statisticaDescrittiva.tex
-<../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQuality.png, id=102, 666.69
+<../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQuality.png, id=110, 666.69
 075pt x 462.528pt>
 File: ../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQuality.png Graphic fi
 le (type png)
@@ -510,7 +549,7 @@ le (type png)
 Package pdftex.def Info: ../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQua
 lity.png  used on input line 10.
 (pdftex.def)             Requested size: 295.90588pt x 205.2844pt.
-<../graphs/DescriptiveStatisticPlots/boxplot_all_x_i.png, id=103, 666.69075pt x
+<../graphs/DescriptiveStatisticPlots/boxplot_all_x_i.png, id=111, 666.69075pt x
  462.528pt>
 File: ../graphs/DescriptiveStatisticPlots/boxplot_all_x_i.png Graphic file (typ
 e png)
@@ -518,7 +557,7 @@ e png)
 Package pdftex.def Info: ../graphs/DescriptiveStatisticPlots/boxplot_all_x_i.pn
 g  used on input line 14.
 (pdftex.def)             Requested size: 295.90588pt x 205.2844pt.
-<../graphs/DescriptiveStatisticPlots/qqplot1/qqplot1.png, id=104, 446.8695pt x 
+<../graphs/DescriptiveStatisticPlots/qqplot1/qqplot1.png, id=112, 446.8695pt x 
 331.83975pt>
 File: ../graphs/DescriptiveStatisticPlots/qqplot1/qqplot1.png Graphic file (typ
 e png)
@@ -533,7 +572,7 @@ Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 27.
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [3 <../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQuality.png> <../graphs
 /DescriptiveStatisticPlots/boxplot_all_x_i.png>]
-<../graphs/DescriptiveStatisticPlots/qqplot1/qqplot2.png, id=115, 446.8695pt x 
+<../graphs/DescriptiveStatisticPlots/qqplot1/qqplot2.png, id=123, 446.8695pt x 
 331.83975pt>
 File: ../graphs/DescriptiveStatisticPlots/qqplot1/qqplot2.png Graphic file (typ
 e png)
@@ -555,7 +594,7 @@ Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 75.
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [5 <../graphs/DescriptiveStatisticPlots/qqplot1/qqplot2.png>] (Analisivariabil
 i.tex
-<../graphs/DescriptiveStatisticPlots/ggplot.png, id=128, 665.48625pt x 592.2125
+<../graphs/DescriptiveStatisticPlots/ggplot.png, id=137, 665.48625pt x 592.2125
 pt>
 File: ../graphs/DescriptiveStatisticPlots/ggplot.png Graphic file (type png)
 <use ../graphs/DescriptiveStatisticPlots/ggplot.png>
@@ -580,20 +619,24 @@ Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 74.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [8]
-File: _assets/logo-universita-bn.png Graphic file (type png)
-<use _assets/logo-universita-bn.png>
-Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 140
-.
-(pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
- [9]
-Overfull \hbox (13.94131pt too wide) in paragraph at lines 160--160
+Overfull \hbox (13.94131pt too wide) in paragraph at lines 116--116
 [] \T1/cmtt/m/n/12 I(x2_FRatio^2) + I(x3_TIME^2) + I(x4_MP^2) + I(x5_CROP^2) + 
 I(x6_FOCAL^2) +[] 
  []
 
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
-Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 248
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 160
+.
+(pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
+[9]
+Overfull \hbox (155.59041pt too wide) detected at line 218
+[]
+ []
+
+File: _assets/logo-universita-bn.png Graphic file (type png)
+<use _assets/logo-universita-bn.png>
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 247
 .
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
 [10])
@@ -603,25 +646,25 @@ Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 79.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [11] (SceltaModello.tex
-<../graphs/diagnostica/modello1.png, id=167, 666.49pt x 666.49pt>
+<../graphs/diagnostica/modello1.png, id=176, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/modello1.png Graphic file (type png)
 <use ../graphs/diagnostica/modello1.png>
 Package pdftex.def Info: ../graphs/diagnostica/modello1.png  used on input line
  26.
 (pdftex.def)             Requested size: 218.51521pt x 218.50844pt.
-<../graphs/diagnostica/modello2.png, id=168, 666.49pt x 666.49pt>
+<../graphs/diagnostica/modello2.png, id=177, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/modello2.png Graphic file (type png)
 <use ../graphs/diagnostica/modello2.png>
 Package pdftex.def Info: ../graphs/diagnostica/modello2.png  used on input line
  33.
 (pdftex.def)             Requested size: 218.51521pt x 218.50844pt.
-<../graphs/diagnostica/modello3.png, id=169, 666.49pt x 666.49pt>
+<../graphs/diagnostica/modello3.png, id=178, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/modello3.png Graphic file (type png)
 <use ../graphs/diagnostica/modello3.png>
 Package pdftex.def Info: ../graphs/diagnostica/modello3.png  used on input line
  43.
 (pdftex.def)             Requested size: 218.51521pt x 218.50844pt.
-<../graphs/diagnostica/modello4.png, id=170, 666.49pt x 666.49pt>
+<../graphs/diagnostica/modello4.png, id=179, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/modello4.png Graphic file (type png)
 <use ../graphs/diagnostica/modello4.png>
 Package pdftex.def Info: ../graphs/diagnostica/modello4.png  used on input line
@@ -633,7 +676,7 @@ Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 55.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [12 <../graphs/diagnostica/modello1.png> <../graphs/diagnostica/modello2.png>]
-<../graphs/diagnostica/modello5.png, id=183, 666.49pt x 666.49pt>
+<../graphs/diagnostica/modello5.png, id=191, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/modello5.png Graphic file (type png)
 <use ../graphs/diagnostica/modello5.png>
 Package pdftex.def Info: ../graphs/diagnostica/modello5.png  used on input line
@@ -661,17 +704,23 @@ L3 programming layer <2024-01-04>
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `relazione.out' has not changed.
-(rerunfilecheck)             Checksum: E85C06A005714CEBD9A9A9FD880D3A3D;2097.
+
+Package rerunfilecheck Warning: File `relazione.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `relazione.out':
+(rerunfilecheck)             Before: 9B263640BF4073C023548C7EF8720388;2217
+(rerunfilecheck)             After:  62BC03984533FA13A7FD82B2A98F05A7;2203.
  ) 
 Here is how much of TeX's memory you used:
- 12081 strings out of 474485
- 189040 string characters out of 5761557
- 1951542 words of memory out of 5000000
- 34119 multiletter control sequences out of 15000+600000
+ 12084 strings out of 474485
+ 189094 string characters out of 5761557
+ 1956542 words of memory out of 5000000
+ 34121 multiletter control sequences out of 15000+600000
  574821 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,13n,79p,601b,497s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,13n,79p,601b,498s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
 1000.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ectt1200.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
@@ -679,19 +728,19 @@ Here is how much of TeX's memory you used:
 pen/ec/dpi600\tcrm1200.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour
 /jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/
 ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fon
-ts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\anuar\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\anuar\AppData\Loca
-l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\anuar\AppDat
-a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\anuar\
-AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\
-anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><D:/M
+ts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\anuar\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\anuar\AppData\Loca
+l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\anuar\AppDat
+a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\anuar\
+AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk> <C:\Users\
+anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk><D:/M
 IK/fonts/type1/public/amsfonts/cm/cmbx8.pfb><D:/MIK/fonts/type1/public/amsfonts
 /cm/cmmi12.pfb><D:/MIK/fonts/type1/public/amsfonts/cm/cmmib10.pfb><D:/MIK/fonts
 /type1/public/amsfonts/cm/cmr12.pfb><D:/MIK/fonts/type1/public/amsfonts/cm/cmr8
 .pfb><D:/MIK/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on relazione.pdf (15 pages, 550940 bytes).
+Output written on relazione.pdf (16 pages, 555416 bytes).
 PDF statistics:
- 614 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
- 165 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 629 PDF objects out of 1000 (max. 8388607)
+ 54 named destinations out of 1000 (max. 500000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

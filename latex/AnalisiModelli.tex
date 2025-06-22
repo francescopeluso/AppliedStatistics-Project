@@ -96,53 +96,9 @@ I valori dell'adjusted $R^2$  e AIC ottenuti sono:
 \begin{equation*}
 	R^2 =   0.87, \quad AIC = 460.76.
 \end{equation*}
+
 \subsection{Modello 3}
-Questo modello è ottenuto tramite la funzione step() di R eliminando i regressori non significativi, a partire dal modello contenente tutti i regressori di primo grado. Il modello ottenuto è:
-\begin{equation*}
-	y=\beta_0+\beta_1x_1+\beta_2x_2+\beta_3x_3+\beta_4x_5+\beta_5x_7
-\end{equation*}
-La stima dei parametri ottenuti per questo modello è:
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|c|c|c|}
-		\hline
-		\textbf{Parametro} & \textbf{Stima} & \textbf{Dev. Std.} \\
-		\hline
-		$\beta_0$ & 65.65  & 1.29 \\
-		$\beta_1$ & -9.18  & 1.38 \\
-		$\beta_2$ & -13.17 & 1.23 \\
-		$\beta_3$ & 4.11   & 1.25 \\
-		$\beta_4$ & -14.41 & 1.25 \\
-		$\beta_5$ & -2.02  & 1.29 \\
-		\hline
-	\end{tabular}
-	\caption{Stime dei coefficienti e deviazioni standard del modello}
-	\label{tab:coef_estimates_poly}
-\end{table}
-Gli intervalli di confidenza al $5\%$, ottenuti tramite il metodo confint() di R, sono:
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|c|c|c|}
-		\hline
-		\textbf{Parametro} & \textbf{Lower bound} & \textbf{Upper bound} \\
-		\hline
-		$\beta_0$ & 63.08 & 68.21 \\
-		$\beta_1$ & -11.92 & -6.45 \\
-		$\beta_2$ & -15.62 & -10.72 \\
-		$\beta_3$ & 1.62 & 6.59 \\
-		$\beta_4$ & -16.89 & -11.93 \\
-		$\beta_5$ & -4.58 & 0.54 \\
-		\hline
-	\end{tabular}
-	\caption{Intervalli di confidenza al 95\% per i coefficienti del modello}
-	\label{tab:ci_coefficienti}
-\end{table}
-I valori dell'adjusted $R^2$  e AIC ottenuti sono:
-\begin{equation*}
-	R^2 =    0.77, \quad AIC =  514.11.
-\end{equation*}
-\subsection{Modello 4}
-L'ultimo modello analizzato, è ottenuto tramite la seguente istruzione R, adottando la funzione step():
+Questo modello è ottenuto tramite la seguente istruzione R, adottando la funzione step():
 \begin{align*}
 	y &= \beta_0 
 	+ \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3 + \beta_4 x_4 + \beta_5 x_5 
@@ -223,3 +179,72 @@ I valori dell'adjusted $R^2$  e AIC ottenuti sono:
 	R^2 =      0.89, \quad AIC=448.27.
 \end{equation*}
 
+\subsection{Modello 4}
+Questo modello è stato ottenuto riducendo il Modello 3
+
+
+\subsection{Modello 5}
+Questo modello è stato ottenuto analizzando anche i termini cubici. In particolare, il modello si presenta nel seguente modo:
+
+\begin{align*}
+	y= \beta_0 + \beta_1x_1 + \beta_2x_2 + \beta_3x_3 + \beta_4x_5 + \beta_5x_6 + \beta_6x_7 + \beta_7x_1^2 + \beta_8x_2^2 + \beta_9x_6^2 + \beta_{10}x_1^3 + \beta_{11}x_7^3 + \beta_{12}x_1x_7 + \beta_{13}x_3x_5 + \beta_{14}x_3x_7
+\end{align*}
+
+La stima dei parametri ottenuti per questo modello è:
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Parametro} & \textbf{Stima} & \textbf{Dev. Std.} \\
+		\hline
+		$\beta_0$   & 81.87  & 1.97 \\
+		$\beta_1$   & -0.44  & 2.16 \\
+		$\beta_2$   & -13.46 & 0.84 \\
+		$\beta_3$   & 4.61   & 0.90 \\
+		$\beta_4$   & -13.74  & 0.83 \\
+		$\beta_5$   & 1.57 & 0.92 \\
+		$\beta_6$   & -6.08   & 1.76 \\
+		$\beta_7$   & -8.63  & 1.10 \\
+		$\beta_8$   & -6.79  & 0.93 \\
+		$\beta_9$   & -1.80  & 0.97 \\
+		$\beta_{10}$ & -4.99  & 1.27 \\
+		$\beta_{11}$ & 1.97   & 0.74 \\
+		$\beta_{12}$ & 1.59  & 1.00 \\
+		$\beta_{13}$ & 1.41   & 0.87 \\
+		$\beta_{14}$ & 1.78  & 0.86 \\
+		\hline
+	\end{tabular}
+	\caption{Stime dei coefficienti e deviazioni standard del modello}
+	\label{tab:stima_coef_std}
+\end{table}
+Gli intervalli di confidenza al $5\%$, ottenuti tramite il metodo confint() di R, sono:
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Parametro} & \textbf{Lower bound} & \textbf{Upper bound} \\
+		\hline
+		$\beta_0$   & 77.95  & 85.80 \\
+		$\beta_1$   & -4.73 & 3.86 \\
+		$\beta_2$   & -15.13 & -11.80 \\
+		$\beta_3$   & 2.81   & 6.40 \\
+		$\beta_4$   & -15.39  & -12.08 \\
+		$\beta_5$   & -0.25 & -3.39 \\
+		$\beta_6$   & -9.58  & -2.57 \\
+		$\beta_7$   & -10.82  & -6.44 \\
+		$\beta_8$   & -8.63 & -4.95 \\
+		$\beta_9$   & -3.72  & 0.12 \\
+		$\beta_{10}$ & -7.52  & -2.47 \\
+		$\beta_{11}$ & 0.50  & 3.43 \\
+		$\beta_{12}$ & -0.39  & 3.58 \\
+		$\beta_{13}$ & -0.31  & 3.14 \\
+		$\beta_{14}$ & 0.07  & 3.49 \\
+		\hline
+	\end{tabular}
+	\caption{Intervalli di confidenza al 95\% per i coefficienti del modello}
+	\label{tab:ci_coefficienti}
+\end{table}
+I valori dell'adjusted $R^2$  e AIC ottenuti sono:
+\begin{equation*}
+	R^2 =      0.92, \quad AIC=431.91.
+\end{equation*}

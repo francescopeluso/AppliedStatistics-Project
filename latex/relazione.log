@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.7)  21 JUN 2025 20:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.2)  22 JUN 2025 10:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,9 +6,9 @@ entering extended mode
 (relazione.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
-(D:\MIK\tex/latex/base\article.cls
+(C:\Program Files\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
-(D:\MIK\tex/latex/base\size12.clo
+(C:\Program Files\MiKTeX\tex/latex/base\size12.clo
 File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count187
@@ -22,72 +22,77 @@ File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
-) (D:\MIK\tex/latex/base\inputenc.sty
+)
+(C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
 )
-(D:\MIK\tex/latex/base\fontenc.sty
+(C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-) (D:\MIK\tex/latex/graphics\graphicx.sty
+)
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
-(D:\MIK\tex/latex/graphics\keyval.sty
+(C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks19
-) (D:\MIK\tex/latex/graphics\graphics.sty
+)
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
 
-(D:\MIK\tex/latex/graphics\trig.sty
+(C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
-(D:\MIK\tex/latex/graphics-cfg\graphics.cfg
+(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
 
-(D:\MIK\tex/latex/graphics-def\pdftex.def
+(C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen141
 \Gin@req@width=\dimen142
 )
-(D:\MIK\tex/generic/babel\babel.sty
+(C:\Program Files\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2024/01/07 v24.1 The Babel package
 \babel@savecnt=\count195
 \U@D=\dimen143
 \l@unhyphenated=\language79
- (D:\MIK\tex/generic/babel\txtbabel.def)
+
+(C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count196
 
 *************************************
 * Local config file bblopts.cfg used
 *
-(D:\MIK\tex/latex/arabi\bblopts.cfg
+(C:\Program Files\MiKTeX\tex/latex/arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-(D:\MIK\tex/latex/babel-italian\italian.ldf
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/latex/babel-italian\italian.ldf
 Language: italian 2024/10/10 v.1.5.01 Italian support for the babel system
 \it@lettering=\count197
 \it@doublequoteactive=\count198
 \it@ISOcompliance=\count199
 ))
-(D:\MIK\tex/generic/babel/locale/it\babel-italian.tex
+(C:\Program Files\MiKTeX\tex/generic/babel/locale/it\babel-italian.tex
 Package babel Info: Importing font and identification data for italian
 (babel)             from babel-it.ini. Reported on input line 11.
 )
-(D:\MIK\tex/latex/etoolbox\etoolbox.sty
+(C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count266
 )
-(D:\MIK\tex/latex/geometry\geometry.sty
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (D:\MIK\tex/generic/iftex\ifvtex.sty
+
+(C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-(D:\MIK\tex/generic/iftex\iftex.sty
+(C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
 \Gm@cnth=\count267
@@ -102,23 +107,26 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layouthoffset=\dimen150
 \Gm@layoutvoffset=\dimen151
 \Gm@dimlist=\toks20
- (D:\MIK\tex/latex/geometry\geometry.cfg)) (D:\MIK\tex/latex/amsmath\amsmath.st
-y
+
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
 \@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
-(D:\MIK\tex/latex/amsmath\amstext.sty
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
- (D:\MIK\tex/latex/amsmath\amsgen.sty
+
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks21
 \ex@=\dimen152
 ))
-(D:\MIK\tex/latex/amsmath\amsbsy.sty
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen153
-) (D:\MIK\tex/latex/amsmath\amsopn.sty
+)
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count270
@@ -169,26 +177,28 @@ LaTeX Info: Redefining \Relbar on input line 971.
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
-(D:\MIK\tex/latex/float\float.sty
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count282
 \float@exts=\toks26
 \float@box=\box53
 \@float@everytoks=\toks27
 \@floatcapt=\box54
-) (D:\MIK\tex/latex/eso-pic\eso-pic.sty
+)
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/latex/eso-pic\eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
 \ESO@tempdima=\dimen161
 \ESO@tempdimb=\dimen162
 
-(D:\MIK\tex/latex/xcolor\xcolor.sty
+(C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
- (D:\MIK\tex/latex/graphics-cfg\color.cfg
+
+(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
 
-(D:\MIK\tex/latex/graphics\mathcolor.ltx)
+(C:\Program Files\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
 Package xcolor Info: Model `RGB' extended on input line 1366.
@@ -199,55 +209,56 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 ))
-(D:\MIK\tex/latex/transparent\transparent.sty
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/latex/transparent\transparent.sty
 Package: transparent 2022-10-27 v1.5 Transparency with color stacks
 
-(D:\MIK\tex/latex/transparent\transparent-nometadata.sty
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/latex/transparent\transparent-nometad
+ata.sty
 Package: transparent-nometadata 2022-10-27 v1.5 Transparency via pdfTeX's color
  stack (HO)
-
-(D:\MIK\tex/latex/auxhook\auxhook.sty
+ (C:\Users\ACER\AppData\Roaming\MiKTeX\tex/latex/auxhook\auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )))
-(D:\MIK\tex/latex/hyperref\hyperref.sty
+(C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2023-11-26 v7.01g Hypertext links for LaTeX
 
-(D:\MIK\tex/generic/infwarerr\infwarerr.sty
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/generic/infwarerr\infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
-(D:\MIK\tex/latex/kvsetkeys\kvsetkeys.sty
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )
-(D:\MIK\tex/generic/kvdefinekeys\kvdefinekeys.sty
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(D:\MIK\tex/generic/pdfescape\pdfescape.sty
+) (C:\Users\ACER\AppData\Roaming\MiKTeX\tex/generic/pdfescape\pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 
-(D:\MIK\tex/generic/ltxcmds\ltxcmds.sty
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
-(D:\MIK\tex/generic/pdftexcmds\pdftexcmds.sty
+(C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 ))
-(D:\MIK\tex/latex/hycolor\hycolor.sty
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(D:\MIK\tex/latex/letltxmacro\letltxmacro.sty
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/latex/letltxmacro\letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
-(D:\MIK\tex/latex/hyperref\nameref.sty
+(C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
- (D:\MIK\tex/latex/refcount\refcount.sty
-Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (D:\MIK\tex/generic/gettitlestring\gettitlestring.sty
-Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 
-(D:\MIK\tex/latex/kvoptions\kvoptions.sty
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/generic/gettitlestring\gettitlestring
+.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (C:\Users\ACER\AppData\Roaming\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count283
@@ -255,16 +266,17 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 \@linkdim=\dimen163
 \Hy@linkcounter=\count284
 \Hy@pagecounter=\count285
-
-(D:\MIK\tex/latex/hyperref\pd1enc.def
+(C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2023-11-26 v7.01g Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (D:\MIK\tex/generic/intcalc\intcalc.sty
+)
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count286
-(D:\MIK\tex/latex/hyperref\puenc.def
+
+(C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2023-11-26 v7.01g Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -280,17 +292,18 @@ Package hyperref Info: Backreferencing OFF on input line 4201.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4448.
 \c@Hy@tempcnt=\count287
- (D:\MIK\tex/latex/url\url.sty
+
+(C:\Program Files\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4786.
 \XeTeXLinkMargin=\dimen164
 
-(D:\MIK\tex/generic/bitset\bitset.sty
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(D:\MIK\tex/generic/bigintcalc\bigintcalc.sty
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
@@ -305,7 +318,7 @@ Package hyperref Info: Link coloring ON on input line 6083.
 Package hyperref Info: Link coloring with OCG OFF on input line 6090.
 Package hyperref Info: PDF/A mode OFF on input line 6095.
 
-(D:\MIK\tex/latex/base\atbegshi-ltx.sty
+(C:\Program Files\MiKTeX\tex/latex/base\atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
@@ -315,27 +328,30 @@ package with kernel methods
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
-(D:\MIK\tex/latex/hyperref\hpdftex.def
+(C:\Program Files\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2023-11-26 v7.01g Hyperref driver for pdfTeX
- (D:\MIK\tex/latex/base\atveryend-ltx.sty
+
+(C:\Program Files\MiKTeX\tex/latex/base\atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
 \Fld@listcount=\count292
 \c@bookmark@seq@number=\count293
- (D:\MIK\tex/latex/rerunfilecheck\rerunfilecheck.sty
+
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.s
+ty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
 
-(D:\MIK\tex/generic/uniquecounter\uniquecounter.sty
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/generic/uniquecounter\uniquecounter.s
+ty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
 \Hy@SectionHShift=\skip53
-)
-(D:\MIK\tex/latex/subfigure\subfigure.sty
+) (C:\Users\ACER\AppData\Roaming\MiKTeX\tex/latex/subfigure\subfigure.sty
 Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfigtopskip=\skip54
 \subfigcapskip=\skip55
@@ -351,15 +367,16 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(D:\MIK\tex/latex/subfigure\subfigure.cfg)
+(C:\Users\ACER\AppData\Roaming\MiKTeX\tex/latex/subfigure\subfigure.cfg)
 \subfig@top=\skip58
 \subfig@bottom=\skip59
 )
-(D:\MIK\tex/latex/l3backend\l3backend-pdftex.def
+(C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count298
 \l__pdf_internal_box=\box55
-) (relazione.aux
+)
+(relazione.aux
 
 LaTeX Warning: Label `tab:' multiply defined.
 
@@ -367,10 +384,10 @@ LaTeX Warning: Label `tab:' multiply defined.
 LaTeX Warning: Label `tab:ci_coefficienti' multiply defined.
 
 
-LaTeX Warning: Label `tab:coef_estimates_poly' multiply defined.
-
-
 LaTeX Warning: Label `tab:ci_coefficienti' multiply defined.
+
+
+LaTeX Warning: Label `tab:stima_coef_std' multiply defined.
 
 
 LaTeX Warning: Label `tab:ci_coefficienti' multiply defined.
@@ -405,7 +422,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
- (D:\MIK\tex/context/base/mkii\supp-pdf.mkii
+ (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count299
 \scratchdimen=\dimen169
@@ -418,12 +435,12 @@ LaTeX Font Info:    ... okay on input line 35.
 \MPnumerator=\count303
 \makeMPintoPDFobject=\count304
 \everyMPtoPDFconversion=\toks29
-) (D:\MIK\tex/latex/epstopdf-pkg\epstopdf-base.sty
+) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(D:\MIK\tex/latex/00miktex\epstopdf-sys.cfg
+(C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 LaTeX Info: Redefining \it@ocap on input line 35.
@@ -468,12 +485,12 @@ Package hyperref Info: Link coloring ON on input line 35.
 \@outlinefile=\write3
 \openout3 = `relazione.out'.
 
-<_assets/logo-dipartimento.png, id=55, 205.76875pt x 81.30376pt>
+<_assets/logo-dipartimento.png, id=59, 205.76875pt x 81.30376pt>
 File: _assets/logo-dipartimento.png Graphic file (type png)
 <use _assets/logo-dipartimento.png>
 Package pdftex.def Info: _assets/logo-dipartimento.png  used on input line 43.
 (pdftex.def)             Requested size: 113.81102pt x 44.96902pt.
-<_assets/logo-universita-bn.png, id=56, 351.3125pt x 351.3125pt>
+<_assets/logo-universita-bn.png, id=60, 351.3125pt x 351.3125pt>
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
 Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 67.
@@ -481,8 +498,8 @@ Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 67.
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [1
 
-{C:/Users/anuar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./_assets/lo
-go-universita-bn.png> <./_assets/logo-dipartimento.png>] (relazione.toc)
+{C:/Users/ACER/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./_assets/log
+o-universita-bn.png> <./_assets/logo-dipartimento.png>] (relazione.toc)
 \tf@toc=\write4
 \openout4 = `relazione.toc'.
 
@@ -501,7 +518,8 @@ Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 71.
  [1] (DescrizioneDataset.tex
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
 2.
- (D:\MIK\tex/latex/base\t1cmtt.fd
+
+(C:\Program Files\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ))
 File: _assets/logo-universita-bn.png Graphic file (type png)
@@ -509,9 +527,9 @@ File: _assets/logo-universita-bn.png Graphic file (type png)
 Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 73.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
-
-[2] (statisticaDescrittiva.tex
-<../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQuality.png, id=100, 666.69
+ [2]
+(statisticaDescrittiva.tex
+<../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQuality.png, id=105, 666.69
 075pt x 462.528pt>
 File: ../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQuality.png Graphic fi
 le (type png)
@@ -519,7 +537,7 @@ le (type png)
 Package pdftex.def Info: ../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQua
 lity.png  used on input line 10.
 (pdftex.def)             Requested size: 295.90588pt x 205.2844pt.
-<../graphs/DescriptiveStatisticPlots/boxplot_all_x_i.png, id=101, 666.69075pt x
+<../graphs/DescriptiveStatisticPlots/boxplot_all_x_i.png, id=106, 666.69075pt x
  462.528pt>
 File: ../graphs/DescriptiveStatisticPlots/boxplot_all_x_i.png Graphic file (typ
 e png)
@@ -527,7 +545,7 @@ e png)
 Package pdftex.def Info: ../graphs/DescriptiveStatisticPlots/boxplot_all_x_i.pn
 g  used on input line 14.
 (pdftex.def)             Requested size: 295.90588pt x 205.2844pt.
-<../graphs/DescriptiveStatisticPlots/qqplot1/qqplot1.png, id=102, 446.8695pt x 
+<../graphs/DescriptiveStatisticPlots/qqplot1/qqplot1.png, id=107, 446.8695pt x 
 331.83975pt>
 File: ../graphs/DescriptiveStatisticPlots/qqplot1/qqplot1.png Graphic file (typ
 e png)
@@ -542,7 +560,7 @@ Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 27.
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [3 <../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQuality.png> <../graphs
 /DescriptiveStatisticPlots/boxplot_all_x_i.png>]
-<../graphs/DescriptiveStatisticPlots/qqplot1/qqplot2.png, id=115, 446.8695pt x 
+<../graphs/DescriptiveStatisticPlots/qqplot1/qqplot2.png, id=120, 446.8695pt x 
 331.83975pt>
 File: ../graphs/DescriptiveStatisticPlots/qqplot1/qqplot2.png Graphic file (typ
 e png)
@@ -564,7 +582,7 @@ Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 75.
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [5 <../graphs/DescriptiveStatisticPlots/qqplot1/qqplot2.png>] (Analisivariabil
 i.tex
-<../graphs/DescriptiveStatisticPlots/ggplot.png, id=128, 665.48625pt x 592.2125
+<../graphs/DescriptiveStatisticPlots/ggplot.png, id=133, 665.48625pt x 592.2125
 pt>
 File: ../graphs/DescriptiveStatisticPlots/ggplot.png Graphic file (type png)
 <use ../graphs/DescriptiveStatisticPlots/ggplot.png>
@@ -589,42 +607,52 @@ Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 74.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [8]
-File: _assets/logo-universita-bn.png Graphic file (type png)
-<use _assets/logo-universita-bn.png>
-Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 140
-.
-(pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
- [9]
-Overfull \hbox (13.94131pt too wide) in paragraph at lines 160--160
+Overfull \hbox (13.94131pt too wide) in paragraph at lines 116--116
 [] \T1/cmtt/m/n/12 I(x2_FRatio^2) + I(x3_TIME^2) + I(x4_MP^2) + I(x5_CROP^2) + 
 I(x6_FOCAL^2) +[] 
  []
 
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
-Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 221
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 147
 .
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
-[10])
+[9]
+File: _assets/logo-universita-bn.png Graphic file (type png)
+<use _assets/logo-universita-bn.png>
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 186
+.
+(pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
+ [10]
+Overfull \hbox (155.59041pt too wide) detected at line 191
+[]
+ []
+
+File: _assets/logo-universita-bn.png Graphic file (type png)
+<use _assets/logo-universita-bn.png>
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 247
+.
+(pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
+[11])
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
 Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 79.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
- [11] (SceltaModello.tex
-<../graphs/diagnostica/diagnostica_ridotto.png, id=167, 666.49pt x 666.49pt>
+ [12] (SceltaModello.tex
+<../graphs/diagnostica/diagnostica_ridotto.png, id=177, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/diagnostica_ridotto.png Graphic file (type png)
 <use ../graphs/diagnostica/diagnostica_ridotto.png>
 Package pdftex.def Info: ../graphs/diagnostica/diagnostica_ridotto.png  used on
  input line 20.
 (pdftex.def)             Requested size: 432.48051pt x 432.49132pt.
-<../graphs/diagnostica/diagnostica_quadrato.png, id=168, 666.49pt x 666.49pt>
+<../graphs/diagnostica/diagnostica_quadrato.png, id=178, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/diagnostica_quadrato.png Graphic file (type png)
 <use ../graphs/diagnostica/diagnostica_quadrato.png>
 Package pdftex.def Info: ../graphs/diagnostica/diagnostica_quadrato.png  used o
 n input line 25.
 (pdftex.def)             Requested size: 432.48051pt x 432.49132pt.
-<../graphs/diagnostica/diagnostica_stepwise.png, id=169, 666.49pt x 666.49pt>
+<../graphs/diagnostica/diagnostica_stepwise.png, id=179, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/diagnostica_stepwise.png Graphic file (type png)
 <use ../graphs/diagnostica/diagnostica_stepwise.png>
 Package pdftex.def Info: ../graphs/diagnostica/diagnostica_stepwise.png  used o
@@ -635,8 +663,8 @@ File: _assets/logo-universita-bn.png Graphic file (type png)
 Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 32.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
- [12 <../graphs/diagnostica/diagnostica_ridotto.png>]
-<../graphs/diagnostica/diagnostica_stepwise_iterations.png, id=179, 666.49pt x 
+ [13 <../graphs/diagnostica/diagnostica_ridotto.png>]
+<../graphs/diagnostica/diagnostica_stepwise_iterations.png, id=188, 666.49pt x 
 666.49pt>
 File: ../graphs/diagnostica/diagnostica_stepwise_iterations.png Graphic file (t
 ype png)
@@ -649,19 +677,19 @@ File: _assets/logo-universita-bn.png Graphic file (type png)
 Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 38.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
- [13 <../graphs/diagnostica/diagnostica_quadrato.png>]
+ [14 <../graphs/diagnostica/diagnostica_quadrato.png>]
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
 Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 39.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
- [14 <../graphs/diagnostica/diagnostica_stepwise.png>])
+ [15 <../graphs/diagnostica/diagnostica_stepwise.png>])
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
 Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 83.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
- [15 <../graphs/diagnostica/diagnostica_stepwise_iterations.png>] (relazione.au
+ [16 <../graphs/diagnostica/diagnostica_stepwise_iterations.png>] (relazione.au
 x)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -672,36 +700,37 @@ L3 programming layer <2024-01-04>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `relazione.out' has not changed.
-(rerunfilecheck)             Checksum: E85C06A005714CEBD9A9A9FD880D3A3D;2097.
+(rerunfilecheck)             Checksum: 62BC03984533FA13A7FD82B2A98F05A7;2203.
  ) 
 Here is how much of TeX's memory you used:
- 12061 strings out of 474485
- 189049 string characters out of 5761557
- 1950542 words of memory out of 5000000
+ 12064 strings out of 474486
+ 193044 string characters out of 5753574
+ 1947542 words of memory out of 5000000
  34102 multiletter control sequences out of 15000+600000
  574821 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,12n,79p,601b,497s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
-1000.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ectt1200.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecti1200.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\tcrm1200.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fonts/pk/
-ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\anuar\AppData\Local\MiKTeX\fon
-ts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\anuar\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\anuar\AppData\Loca
-l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\anuar\AppDat
-a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\anuar\
-AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\
-anuar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><D:/M
-IK/fonts/type1/public/amsfonts/cm/cmbx8.pfb><D:/MIK/fonts/type1/public/amsfonts
-/cm/cmmi12.pfb><D:/MIK/fonts/type1/public/amsfonts/cm/cmmib10.pfb><D:/MIK/fonts
-/type1/public/amsfonts/cm/cmr12.pfb><D:/MIK/fonts/type1/public/amsfonts/cm/cmr8
-.pfb><D:/MIK/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on relazione.pdf (16 pages, 527735 bytes).
+ <C:\Users\ACER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1
+000.pk> <C:\Users\ACER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
+ectt1200.pk> <C:\Users\ACER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dp
+i600\ecti1200.pk> <C:\Users\ACER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
+ec/dpi600\tcrm1200.pk> <C:\Users\ACER\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
+ppen/ec/dpi600\ecbx1440.pk> <C:\Users\ACER\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\ACER\AppData\Local\MiKTeX\fonts/pk/l
+jfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\ACER\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\ACER\AppData\Local\MiKTeX\
+fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\ACER\AppData\Local\Mi
+KTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\ACER\AppData\Loc
+al\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\ACER\AppDat
+a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><C:/Program Files
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on relazione.pdf (17 pages, 530370 bytes).
 PDF statistics:
- 602 PDF objects out of 1000 (max. 8388607)
- 50 named destinations out of 1000 (max. 500000)
- 160 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 611 PDF objects out of 1000 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
+ 168 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -14,3 +14,6 @@
 \contentsline {subsection}{\numberline {4.4}Modello 4}{10}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Modello 5}{11}{subsection.4.5}%
 \contentsline {section}{\numberline {5}Scelta del modello}{13}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Grafici diagnostici}{13}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Analisi dei parametri e verifica delle ipotesi classiche}{14}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Conclusioni}{15}{subsection.5.3}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.7)  22 JUN 2025 10:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.7)  22 JUN 2025 11:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -381,6 +381,9 @@ LaTeX Warning: Label `tab:stima_coef_std' multiply defined.
 
 LaTeX Warning: Label `tab:ci_coefficienti' multiply defined.
 
+
+LaTeX Warning: Label `tab:coef_estimates' multiply defined.
+
 )
 \openout1 = `relazione.aux'.
 
@@ -465,12 +468,12 @@ Package hyperref Info: Link coloring ON on input line 35.
 \@outlinefile=\write3
 \openout3 = `relazione.out'.
 
-<_assets/logo-dipartimento.png, id=59, 205.76875pt x 81.30376pt>
+<_assets/logo-dipartimento.png, id=71, 205.76875pt x 81.30376pt>
 File: _assets/logo-dipartimento.png Graphic file (type png)
 <use _assets/logo-dipartimento.png>
 Package pdftex.def Info: _assets/logo-dipartimento.png  used on input line 43.
 (pdftex.def)             Requested size: 113.81102pt x 44.96902pt.
-<_assets/logo-universita-bn.png, id=60, 351.3125pt x 351.3125pt>
+<_assets/logo-universita-bn.png, id=72, 351.3125pt x 351.3125pt>
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
 Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 67.
@@ -508,7 +511,7 @@ Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 73.
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
 
 [2] (statisticaDescrittiva.tex
-<../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQuality.png, id=107, 666.69
+<../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQuality.png, id=122, 666.69
 075pt x 462.528pt>
 File: ../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQuality.png Graphic fi
 le (type png)
@@ -516,7 +519,7 @@ le (type png)
 Package pdftex.def Info: ../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQua
 lity.png  used on input line 10.
 (pdftex.def)             Requested size: 295.90588pt x 205.2844pt.
-<../graphs/DescriptiveStatisticPlots/boxplot_all_x_i.png, id=108, 666.69075pt x
+<../graphs/DescriptiveStatisticPlots/boxplot_all_x_i.png, id=123, 666.69075pt x
  462.528pt>
 File: ../graphs/DescriptiveStatisticPlots/boxplot_all_x_i.png Graphic file (typ
 e png)
@@ -524,7 +527,7 @@ e png)
 Package pdftex.def Info: ../graphs/DescriptiveStatisticPlots/boxplot_all_x_i.pn
 g  used on input line 14.
 (pdftex.def)             Requested size: 295.90588pt x 205.2844pt.
-<../graphs/DescriptiveStatisticPlots/qqplot1/qqplot1.png, id=109, 446.8695pt x 
+<../graphs/DescriptiveStatisticPlots/qqplot1/qqplot1.png, id=124, 446.8695pt x 
 331.83975pt>
 File: ../graphs/DescriptiveStatisticPlots/qqplot1/qqplot1.png Graphic file (typ
 e png)
@@ -539,7 +542,7 @@ Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 27.
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [3 <../graphs/DescriptiveStatisticPlots/boxplot_y_VideoQuality.png> <../graphs
 /DescriptiveStatisticPlots/boxplot_all_x_i.png>]
-<../graphs/DescriptiveStatisticPlots/qqplot1/qqplot2.png, id=120, 446.8695pt x 
+<../graphs/DescriptiveStatisticPlots/qqplot1/qqplot2.png, id=135, 446.8695pt x 
 331.83975pt>
 File: ../graphs/DescriptiveStatisticPlots/qqplot1/qqplot2.png Graphic file (typ
 e png)
@@ -561,7 +564,7 @@ Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 75.
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [5 <../graphs/DescriptiveStatisticPlots/qqplot1/qqplot2.png>] (Analisivariabil
 i.tex
-<../graphs/DescriptiveStatisticPlots/ggplot.png, id=133, 665.48625pt x 592.2125
+<../graphs/DescriptiveStatisticPlots/ggplot.png, id=148, 665.48625pt x 592.2125
 pt>
 File: ../graphs/DescriptiveStatisticPlots/ggplot.png Graphic file (type png)
 <use ../graphs/DescriptiveStatisticPlots/ggplot.png>
@@ -619,45 +622,45 @@ Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 79.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [12] (SceltaModello.tex
-<../graphs/diagnostica/modello1.png, id=179, 666.49pt x 666.49pt>
+<../graphs/diagnostica/modello1.png, id=194, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/modello1.png Graphic file (type png)
 <use ../graphs/diagnostica/modello1.png>
 Package pdftex.def Info: ../graphs/diagnostica/modello1.png  used on input line
- 26.
+ 11.
 (pdftex.def)             Requested size: 218.51521pt x 218.50844pt.
-<../graphs/diagnostica/modello2.png, id=180, 666.49pt x 666.49pt>
+<../graphs/diagnostica/modello2.png, id=195, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/modello2.png Graphic file (type png)
 <use ../graphs/diagnostica/modello2.png>
 Package pdftex.def Info: ../graphs/diagnostica/modello2.png  used on input line
- 33.
+ 18.
 (pdftex.def)             Requested size: 218.51521pt x 218.50844pt.
-<../graphs/diagnostica/modello3.png, id=181, 666.49pt x 666.49pt>
+<../graphs/diagnostica/modello3.png, id=196, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/modello3.png Graphic file (type png)
 <use ../graphs/diagnostica/modello3.png>
 Package pdftex.def Info: ../graphs/diagnostica/modello3.png  used on input line
- 43.
+ 28.
 (pdftex.def)             Requested size: 218.51521pt x 218.50844pt.
-<../graphs/diagnostica/modello4.png, id=182, 666.49pt x 666.49pt>
+<../graphs/diagnostica/modello4.png, id=197, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/modello4.png Graphic file (type png)
 <use ../graphs/diagnostica/modello4.png>
 Package pdftex.def Info: ../graphs/diagnostica/modello4.png  used on input line
- 50.
+ 35.
 (pdftex.def)             Requested size: 218.51521pt x 218.50844pt.
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
-Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 55.
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 40.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [13 <../graphs/diagnostica/modello1.png> <../graphs/diagnostica/modello2.png>]
-<../graphs/diagnostica/modello5.png, id=194, 666.49pt x 666.49pt>
+<../graphs/diagnostica/modello5.png, id=206, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/modello5.png Graphic file (type png)
 <use ../graphs/diagnostica/modello5.png>
 Package pdftex.def Info: ../graphs/diagnostica/modello5.png  used on input line
- 58.
+ 43.
 (pdftex.def)             Requested size: 341.43307pt x 341.44104pt.
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
-Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 66.
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 80.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
  [14 <../graphs/diagnostica/modello3.png> <../graphs/diagnostica/modello4.png> 
@@ -678,13 +681,13 @@ L3 programming layer <2024-01-04>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `relazione.out' has not changed.
-(rerunfilecheck)             Checksum: 62BC03984533FA13A7FD82B2A98F05A7;2203.
+(rerunfilecheck)             Checksum: 6ADAEC3431EC25D452B8F20F5C8AA887;2831.
  ) 
 Here is how much of TeX's memory you used:
- 12086 strings out of 474485
- 189093 string characters out of 5761557
- 1953542 words of memory out of 5000000
- 34120 multiletter control sequences out of 15000+600000
+ 12093 strings out of 474485
+ 189191 string characters out of 5761557
+ 1954542 words of memory out of 5000000
+ 34123 multiletter control sequences out of 15000+600000
  574821 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,601b,497s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -705,9 +708,9 @@ IK/fonts/type1/public/amsfonts/cm/cmbx8.pfb><D:/MIK/fonts/type1/public/amsfonts
 /cm/cmmi12.pfb><D:/MIK/fonts/type1/public/amsfonts/cm/cmmib10.pfb><D:/MIK/fonts
 /type1/public/amsfonts/cm/cmr12.pfb><D:/MIK/fonts/type1/public/amsfonts/cm/cmr8
 .pfb><D:/MIK/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on relazione.pdf (16 pages, 556010 bytes).
+Output written on relazione.pdf (16 pages, 563343 bytes).
 PDF statistics:
- 627 PDF objects out of 1000 (max. 8388607)
- 57 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 654 PDF objects out of 1000 (max. 8388607)
+ 61 named destinations out of 1000 (max. 500000)
+ 197 words of extra memory for PDF output out of 10000 (max. 10000000)
 

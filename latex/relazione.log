@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.7)  22 JUN 2025 10:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.7)  22 JUN 2025 10:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -375,6 +375,12 @@ LaTeX Warning: Label `tab:stima_coef_std' multiply defined.
 
 LaTeX Warning: Label `tab:ci_coefficienti' multiply defined.
 
+
+LaTeX Warning: Label `tab:stima_coef_std' multiply defined.
+
+
+LaTeX Warning: Label `tab:ci_coefficienti' multiply defined.
+
 )
 \openout1 = `relazione.aux'.
 
@@ -591,41 +597,47 @@ Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 160
 .
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
 [9]
-Overfull \hbox (155.59041pt too wide) detected at line 218
+File: _assets/logo-universita-bn.png Graphic file (type png)
+<use _assets/logo-universita-bn.png>
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 238
+.
+(pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
+ [10]
+Overfull \hbox (5.85033pt too wide) detected at line 271
 []
  []
 
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
-Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 247
+Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 300
 .
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
-[10])
+[11])
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
 Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 79.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
- [11] (SceltaModello.tex
-<../graphs/diagnostica/modello1.png, id=172, 666.49pt x 666.49pt>
+ [12] (SceltaModello.tex
+<../graphs/diagnostica/modello1.png, id=179, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/modello1.png Graphic file (type png)
 <use ../graphs/diagnostica/modello1.png>
 Package pdftex.def Info: ../graphs/diagnostica/modello1.png  used on input line
  26.
 (pdftex.def)             Requested size: 218.51521pt x 218.50844pt.
-<../graphs/diagnostica/modello2.png, id=173, 666.49pt x 666.49pt>
+<../graphs/diagnostica/modello2.png, id=180, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/modello2.png Graphic file (type png)
 <use ../graphs/diagnostica/modello2.png>
 Package pdftex.def Info: ../graphs/diagnostica/modello2.png  used on input line
  33.
 (pdftex.def)             Requested size: 218.51521pt x 218.50844pt.
-<../graphs/diagnostica/modello3.png, id=174, 666.49pt x 666.49pt>
+<../graphs/diagnostica/modello3.png, id=181, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/modello3.png Graphic file (type png)
 <use ../graphs/diagnostica/modello3.png>
 Package pdftex.def Info: ../graphs/diagnostica/modello3.png  used on input line
  43.
 (pdftex.def)             Requested size: 218.51521pt x 218.50844pt.
-<../graphs/diagnostica/modello4.png, id=175, 666.49pt x 666.49pt>
+<../graphs/diagnostica/modello4.png, id=182, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/modello4.png Graphic file (type png)
 <use ../graphs/diagnostica/modello4.png>
 Package pdftex.def Info: ../graphs/diagnostica/modello4.png  used on input line
@@ -636,8 +648,8 @@ File: _assets/logo-universita-bn.png Graphic file (type png)
 Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 55.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
- [12 <../graphs/diagnostica/modello1.png> <../graphs/diagnostica/modello2.png>]
-<../graphs/diagnostica/modello5.png, id=188, 666.49pt x 666.49pt>
+ [13 <../graphs/diagnostica/modello1.png> <../graphs/diagnostica/modello2.png>]
+<../graphs/diagnostica/modello5.png, id=194, 666.49pt x 666.49pt>
 File: ../graphs/diagnostica/modello5.png Graphic file (type png)
 <use ../graphs/diagnostica/modello5.png>
 Package pdftex.def Info: ../graphs/diagnostica/modello5.png  used on input line
@@ -648,14 +660,14 @@ File: _assets/logo-universita-bn.png Graphic file (type png)
 Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 66.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
- [13 <../graphs/diagnostica/modello3.png> <../graphs/diagnostica/modello4.png> 
+ [14 <../graphs/diagnostica/modello3.png> <../graphs/diagnostica/modello4.png> 
 <../graphs/diagnostica/modello5.png>])
 File: _assets/logo-universita-bn.png Graphic file (type png)
 <use _assets/logo-universita-bn.png>
 Package pdftex.def Info: _assets/logo-universita-bn.png  used on input line 83.
 
 (pdftex.def)             Requested size: 341.43306pt x 341.45886pt.
- [14]
+ [15]
 (relazione.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -669,9 +681,9 @@ Package rerunfilecheck Info: File `relazione.out' has not changed.
 (rerunfilecheck)             Checksum: 62BC03984533FA13A7FD82B2A98F05A7;2203.
  ) 
 Here is how much of TeX's memory you used:
- 12083 strings out of 474485
- 189070 string characters out of 5761557
- 1956542 words of memory out of 5000000
+ 12086 strings out of 474485
+ 189093 string characters out of 5761557
+ 1953542 words of memory out of 5000000
  34120 multiletter control sequences out of 15000+600000
  574821 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -693,9 +705,9 @@ IK/fonts/type1/public/amsfonts/cm/cmbx8.pfb><D:/MIK/fonts/type1/public/amsfonts
 /cm/cmmi12.pfb><D:/MIK/fonts/type1/public/amsfonts/cm/cmmib10.pfb><D:/MIK/fonts
 /type1/public/amsfonts/cm/cmr12.pfb><D:/MIK/fonts/type1/public/amsfonts/cm/cmr8
 .pfb><D:/MIK/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on relazione.pdf (15 pages, 552940 bytes).
+Output written on relazione.pdf (16 pages, 556010 bytes).
 PDF statistics:
- 620 PDF objects out of 1000 (max. 8388607)
- 54 named destinations out of 1000 (max. 500000)
+ 627 PDF objects out of 1000 (max. 8388607)
+ 57 named destinations out of 1000 (max. 500000)
  173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

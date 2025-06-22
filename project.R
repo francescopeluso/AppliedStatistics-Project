@@ -7,8 +7,8 @@
 # ------------------------------------------------------------------------------
 
 # Impostazione path cartella progetto (N.B. cambia a seconda di chi usa il file)
-#setwd('~/GitHub Repos/AppliedStatistics-Project')     # path Francesco
-setwd('C:/Users/anuar/AppliedStatistics-Project')     # path Anuar
+setwd('~/GitHub Repos/AppliedStatistics-Project')     # path Francesco
+#setwd('C:/Users/anuar/AppliedStatistics-Project')     # path Anuar
 #setwd('/Users/corry/AppliedStatistics-Project')     # path Corrado
 #setwd('C:/Users/ACER/Desktop/GitHub/AppliedStatistics-Project')     # path Gerardo
 
@@ -96,7 +96,7 @@ pairs(data , upper.panel = NULL)
 library(ggplot2)
 library("GGally")
 ggpairs(data, upper = list(continuous = "blank"))   # nasconde i grafici sotto la diagonale
-#
+
 #CorrPlot
 library("corrplot")
 corrplot.mixed(cor(data),number.cex=0.8,tl.cex=0.8)
@@ -241,34 +241,24 @@ summary(fit10)
 # multipla
 # ------------------------------------------------------------------------------
 
-# Modello costruito con tutte le variabili indipendenti
+# Modello con tutte le variabili indipendenti
 model_full <- lm(y_VideoQuality ~ ., data=data)
 summary(model_full)
 
-# Squared R e Adj. Squared R sono rispettivamente 0.7871 e 0.7709,
-# il che indica che queto modello ha un buon potere esplicativo.
+# Il modello completo presenta R^2 = 0.7871 e Adj. R^2 = 0.7709, 
+# indicando una buona capacità esplicativa. Il p-value globale è significativo (< 2.2e-16),
+# e le variabili x1_ISO, x2_FRatio, x3_TIME e x5_CROP risultano significative.
 
-# Inoltre, con un p-value globale minore di 2.2*10^16, ciò significa
-# che il modello è complessivamente significativo.
-
-# Tra le variabili che risultano significative nel modello complessivo,
-# abbiamo: ISO, FRatio, TIME, CROP
-
-# Con questi dati, ora posso creare un modello ridotto, composto dalle
-# sole variabili significative
-
+# Creiamo ora un modello ridotto, includendo solo le variabili significative
 model_reduced <- lm(y_VideoQuality ~ x1_ISO + x2_FRatio + x3_TIME + x5_CROP, data=data)
 summary(model_reduced)
 
-# Dal summary deduciamo che tutti i regressori restano significativi, avendo
-# tutti loro un p-value minore di 0.01 (**), e che gli indici Squared R e
-# Adj. Squared R sono rimasti pressochè simili
+# Tutti i regressori restano altamente significativi.
+# R^2 e Adj. R^2 sono molto simili al modello completo, quindi il modello è più
+# "leggero" mantenendo comunque delle buone prestazioni.
 
-# Dalle analisi effettuate nel primo punto, però, notiamo che con alcuni
-# regressori è presente un legame non lineare, ma quadratico,
-# dunque possiamo tentare di aggiungere dei termini quadratici al nostro
-# modello di regressione lineare (stiamo parlando di )
-
+# Dalle analisi precedenti è emersa una possibile non linearità in alcune variabili.
+# Aggiungiamo quindi termini quadratici per migliorare l'adattamento.
 model_quad <- lm(y_VideoQuality ~ 
                    x1_ISO + I(x1_ISO^2) +
                    x2_FRatio + I(x2_FRatio^2) +
@@ -276,187 +266,175 @@ model_quad <- lm(y_VideoQuality ~
                  data = data)
 summary(model_quad)
 
-model_quad_exp <- lm(exp(y_VideoQuality) ~ 
-                   x1_ISO + I(x1_ISO^2) +
-                   x2_FRatio + I(x2_FRatio^2) +
-                   x3_TIME + x5_CROP,
-                 data = data)
-summary(model_quad_exp)
+# I termini quadratici migliorano il modello: R^2 e Adj. R^2 aumentano,
+# il residuo standard diminuisce e i coefficienti sono tutti altamente significativi.
 
-
-# Con l'introduzione di questi termini quadratici, notiamo come tutti i
-# coefficienti sono altamente significativi, poichè hanno p-modvalue < 0.001 (***),
-# e che anche gli indici di Squared R e Adj. Squared R sono aumentati, mentre
-# il residual standard error sia diminuito da 12.8 a 9.68, con il p-value
-# complessivo del modello minore di 2.2*10^16.
-
-# Procediamo a confrontare i tre modelli appena creati tramite AIC e BIC:
-# il modello con valore più basso di AIC e BIC sarà quello preferibile
-
+# Confronto tramite AIC e MSE per valutare le prestazioni dei modelli
 extractAIC(model_full)
 extractAIC(model_reduced)
 extractAIC(model_quad)
 
+mse_full = mean(residuals(model_full)^2); print(mse_full);
+mse_reduced = mean(residuals(model_reduced)^2); print(mse_reduced);
+mse_quad = mean(residuals(model_quad)^2); print(mse_quad);
 
-# In effetti, entrambi i confronti ci confermano che l'ultimo modello costruito,
-# ovvero quello con i termini quadratici, sia il migliore.
+# Il modello con termini quadratici risulta il migliore finora,
+# con un indice AIC di 460.7592 e un MSE pari a 87.1466
 
-# Adesso però, vogliamo verificare se è possibile ottenere un modello ancora
-# più efficiente, utilizzando un approccio "automatizzato".
+# Proviamo ora ad automatizzare il processo di costruzione dei modelli, tramite
+# approcci stepwise (basata su AIC classico, ovvero parametro k = 2)
 
-# Per fare ciò, applichiamo una procedura di selezione stepwise delle variabili
-# indipendenti da aggiungere o rimuovere dal nostro modello, basandoci
-# sul valore AIC più basso.
+# Partiamo dal modello completo
+model_stepwise <- step(model_full, direction = "both", trace = 1, k = 2)
+summary(model_stepwise)
+extractAIC(model_stepwise) # AIC = 514.1132
+mse_stepwise = mean(residuals(model_stepwise)^2); print(mse_stepwise); # MSE = 151
 
-model_stepwise <- step(model_full, direction = "both", trace = 1)
-summary(model_stepwise)  # risultato AIC = 514*
+# Non sembrano esserci miglioramenti, anzi, sono stati lasciati dei regressori
+# abbastanza significativi come x7_PixDensity, e il valore dell'indice AIC
+# e dell'MSE sono aumentati.
 
-# Confronto AIC tra tutti i modelli
-extractAIC(model_full)
-extractAIC(model_reduced)
-extractAIC(model_quad)
-extractAIC(model_stepwise) 
-
-# Proviamo adesso, con un metodo stepwise, a vedere se è possibile migliorare
-# il modello (a partire da quello con i termini quadratici), andando ad
-# aggiungere le interazioni tra le possibili coppie di variabili indipendenti
-
-model_step_interactions <- lm(y_VideoQuality ~ (.)^2 + I(x1_ISO^2)+ I(x2_FRatio^2)+I(x3_TIME^2)+I(x4_MP^2)+I(x5_CROP^2)+I(x6_FOCAL^2)+I(x7_PixDensity^2), data = data)
-model_step_interactions <- step(model_step_interactions, k=log(100))
-extractAIC(model_step_interactions)
+# Proviamo a costruire un ulteriore modello con termini quadratici e interazioni
+# tra le varie variabili indipendenti del dataset
+model_step_interactions <- lm(y_VideoQuality ~ (.)^2 + 
+                                I(x1_ISO^2)+ I(x2_FRatio^2)+I(x3_TIME^2)+
+                                I(x4_MP^2)+I(x5_CROP^2)+I(x6_FOCAL^2)+I(x7_PixDensity^2), 
+                              data = data)
+model_step_interactions <- step(model_step_interactions, k = 2)
 summary(model_step_interactions)
+extractAIC(model_step_interactions) # AIC = 448.2659
+mse_step_interactions = mean(residuals(model_step_interactions)^2); print(mse_step_interactions); # MSE = 61.72313
 
+# Notiamo come nonostante la funzione step() abbia lasciato dei regressori apparentemente
+# non significativi (es. x4MP con p-value = 0.86183 > 0.5), ma che comunque sia
+# riuscito a costruire un modello con un indice AIC più basso e con MSE più basso
+
+# Costruiamo un modello simile, escludendo x4_MP e x6_FOCAL (che apparentemente
+# sembrano essere non significative)
+model_step_interactions_reduced <- lm(
+  y_VideoQuality ~ (.)^2 +
+    I(x1_ISO^2) + I(x2_FRatio^2) + I(x3_TIME^2) + 
+    I(x5_CROP^2) + I(x7_PixDensity^2), 
+  data = data[, !names(data) %in% c("x4_MP", "x6_FOCAL")]
+)
+model_step_interactions_reduced <- step(model_step_interactions_reduced, k = 2)
+summary(model_step_interactions_reduced)
+extractAIC(model_step_interactions_reduced)
+mse_step_interactions_rdcd = mean(residuals(model_step_interactions_reduced)^2); print(mse_step_interactions_rdcd);
+
+# Andando a rimuovere i due regressori, notiamo come gli indici AIC e MSE non
+# siano variati di molto (rispettivamente 451.666 e 76.45178), quindi **potrebbe**
+# essere il modello ideale da usare, dove non si manifesta un overfitting rispetto
+# al dataset utilizzato
+
+# Confronto AIC di tutti i modelli finora creati
 extractAIC(model_full)
 extractAIC(model_reduced)
 extractAIC(model_quad)
 extractAIC(model_stepwise)
 extractAIC(model_step_interactions)
+extractAIC(model_step_interactions_reduced)
 
-#modello cubico
-
-model_step_cubic <- lm(y_VideoQuality ~ (.)^2 + I(x1_ISO^2)+ I(x2_FRatio^2)+I(x3_TIME^2)+I(x4_MP^2)+I(x5_CROP^2)+I(x6_FOCAL^2)+I(x7_PixDensity^2) + (.)^3, data=data)
-model_step_cubic <- step(model_step_cubic, k=2)
-summary(model_step_cubic)
-
-
-# Confrontiamo anche graficamente i nostri modelli di regressione multipla
-
-pred_full <- predict(model_full)
-pred_reduced <- predict(model_reduced) 
-pred_quad <- predict(model_quad)
-pred_stepwise <- predict(model_stepwise)
-
-# Layout 2x2 per confronto principale
-par(mfrow = c(2, 2), mar = c(4, 4, 3, 1))
-
-# Grafici osservati vs predetti
-models <- list("Completo" = pred_full, "Ridotto" = pred_reduced, 
-               "Quadratico" = pred_quad, "Stepwise" = pred_stepwise)
-colors <- c("#E31A1C", "#1F78B4", "#33A02C", "#FF7F00")
-
-for(i in 1:4) {
-  plot(data$y_VideoQuality, models[[i]], 
-       main = names(models)[i], xlab = "Osservato", ylab = "Predetto",
-       pch = 19, col = alpha(colors[i], 0.6))
-  abline(0, 1, lty = 2)
-  r2 <- cor(data$y_VideoQuality, models[[i]])^2
-  text(20, 100, paste("R² =", round(r2, 3)), cex = 0.9)
-}
-
-par(mfrow = c(1, 1))
-
-# Tabella performance
-model_list <- list(model_full, model_reduced, model_quad, model_stepwise)
-results <- data.frame(
-  Modello = c("Completo", "Ridotto", "Quadratico", "Stepwise"),
-  R2 = sapply(model_list, function(x) round(summary(x)$r.squared, 3)),
-  R2_adj = sapply(model_list, function(x) round(summary(x)$adj.r.squared, 3)),
-  AIC = round(sapply(model_list, AIC), 1),
-  BIC = round(sapply(model_list, BIC), 1)
+# Introduzione di termini cubici per migliorare ulteriormente il fit
+model_cubic <- lm(
+  y_VideoQuality ~ 
+    (x1_ISO + x2_FRatio + x3_TIME + x5_CROP + x6_FOCAL + x7_PixDensity)^2 +
+    I(x1_ISO^2) + I(x2_FRatio^2) + I(x3_TIME^2) + I(x5_CROP^2) + I(x6_FOCAL^2) + I(x7_PixDensity^2) +
+    I(x1_ISO^3) + I(x2_FRatio^3) + I(x3_TIME^3) + I(x5_CROP^3) + I(x6_FOCAL^3) + I(x7_PixDensity^3),
+  data = data
 )
+model_cubic_step <- step(model_cubic, k = 2)
+summary(model_cubic_step)
+extractAIC(model_cubic_step)
+mse_step_cubic = mean(residuals(model_cubic_step)^2); print(mse_step_cubic);
 
-print(results)
+# Quest'ultimo modello vediamo come anch'esso abbassa i valori dell'indice AIC
+# (pari a 431.9128) e dell'MSE (pari a 55.65254)
 
-# Grafico confronto diretto
-plot(data$y_VideoQuality, pred_quad, 
-     main = "Confronto Modelli", xlab = "y_VideoQuality", ylab = "Predizioni",
-     pch = 19, col = alpha("green", 0.7), cex = 0.8)
-points(data$y_VideoQuality, pred_full, pch = 19, col = alpha("red", 0.5), cex = 0.6)
-points(data$y_VideoQuality, pred_stepwise, pch = 19, col = alpha("orange", 0.5), cex = 0.6)
-abline(0, 1, lty = 2, lwd = 2)
-legend("topleft", c("Quadratico", "Completo", "Stepwise"), 
-       col = c("green", "red", "orange"), pch = 19, cex = 0.8)
 
 # ------------------------------------------------------------------------------
 # PUNTO 4-5:
 # Stima dei parametri dei modelli e intervalli di confidenza
-# multipla
+# Calcolo del coefficiente di determinazione e grafici diagnostici
 # ------------------------------------------------------------------------------
 
+# Modello completo
 summary(model_full)
+confint(model_full, level = 0.95)
+confint(model_full, level = 0.90)
 dev.new(width = 550, height = 330, unit = "px")
 par(mfrow=c(2,2))
-plot(model_full, main = "all linear regressors")
-dev.print(device=pdf,"diagLin1.pdf")
+plot(model_full, main = "Diagnostica - Modello completo")
+dev.print(device=pdf,"diag_model_full.pdf")
 
+# Modello ridotto
 summary(model_reduced)
+confint(model_reduced, level = 0.95)
+confint(model_reduced, level = 0.90)
 dev.new(width = 550, height = 330, unit = "px")
 par(mfrow=c(2,2))
-plot(model_reduced, main = "modello 1")
-dev.print(device=pdf,"diagLin2.pdf")
+plot(model_reduced, main = "Diagnostica - Modello ridotto")
+dev.print(device=pdf,"diag_model_reduced.pdf")
 
+# Modello quadratico
 summary(model_quad)
+confint(model_quad, level = 0.95)
+confint(model_quad, level = 0.90)
 dev.new(width = 550, height = 330, unit = "px")
 par(mfrow=c(2,2))
-plot(model_quad, main = "modello 2")
-dev.print(device=pdf,"diagLin3.pdf")
+plot(model_quad, main = "Diagnostica - Modello quadratico")
+dev.print(device=pdf,"diag_model_quad.pdf")
 
+# Modello stepwise
 summary(model_stepwise)
+confint(model_stepwise, level = 0.95)
+confint(model_stepwise, level = 0.90)
 dev.new(width = 550, height = 330, unit = "px")
 par(mfrow=c(2,2))
-plot(model_stepwise, main = "modello 3")
-dev.print(device=pdf,"diagLin4.pdf")
+plot(model_stepwise, main = "Diagnostica - Modello stepwise")
+dev.print(device=pdf,"diag_model_stepwise.pdf")
 
+# Modello con interazioni
 summary(model_step_interactions)
+confint(model_step_interactions, level = 0.95)
+confint(model_step_interactions, level = 0.90)
 dev.new(width = 550, height = 330, unit = "px")
 par(mfrow=c(2,2))
-plot(model_step_interactions, main = "modello 4")
-dev.print(device=pdf,"diagLin5.pdf")
+plot(model_step_interactions, main = "Diagnostica - Modello interazioni")
+dev.print(device=pdf,"diag_model_step_interactions.pdf")
 
-
-summary(model_quad_exp)
+# Modello cubico (finale)
+summary(model_cubic_step)
+confint(model_cubic_step, level = 0.95)
+confint(model_cubic_step, level = 0.90)
 dev.new(width = 550, height = 330, unit = "px")
 par(mfrow=c(2,2))
-plot(model_quad_exp, main = "modello 6")
-dev.print(device=pdf,"diagLin6.pdf")
+plot(model_cubic_step, main = "Diagnostica - Modello cubico")
+dev.print(device=pdf,"diag_model_cubic_step.pdf")
+
 
 # ------------------------------------------------------------------------------
 # PUNTO 6:
 # Analisi di normalità dei residui
 # ------------------------------------------------------------------------------
 
-# 1. model_reduced
+# 1. Modello ridotto
 residui_model_reduced <- residuals(model_reduced)
-
 shapiro.test(residui_model_reduced)
 
-# 2. model_quad
+# 2. Modello con termini quadratici
 residui_model_quad <- residuals(model_quad)
-
 shapiro.test(residui_model_quad)
 
-# 3. model_stepwise
+# 3. Modello stepwise
 residui_model_stepwise <- residuals(model_stepwise)
-
 shapiro.test(residui_model_stepwise)
 
-# 4. model_step_interactions
+# 4. Modello con interazioni e quadrati
 residui_model_step_interactions <- residuals(model_step_interactions)
-
 shapiro.test(residui_model_step_interactions)
 
-
-
-
-
+# 5. Modello finale scelto: cubico + interazioni lineari
+residui_model_cubic <- residuals(model_cubic_step)
+shapiro.test(residui_model_cubic)
 

@@ -65,6 +65,22 @@ Icon
 # Thumbnails
 ._*
 
+# Ignora tutti i file PDF
+*.pdf
+
+# Ignora file temporanei generati da LaTeX
+*.aux
+*.log
+*.toc
+*.out
+*.lof
+*.lot
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd

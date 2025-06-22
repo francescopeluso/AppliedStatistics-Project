@@ -191,31 +191,45 @@ La stima dei parametri ottenuti per questo modello è:
 Gli intervalli di confidenza al $5\%$, ottenuti tramite il metodo confint() di R, sono:
 \begin{table}[H]
 	\centering
-	\begin{tabular}{|c|c|c|}
-		\hline
-		\textbf{Parametro} & \textbf{Lower bound} & \textbf{Upper bound} \\
-		\hline
-		$\beta_0$   & 77.29  & 85.99 \\
-		$\beta_1$   & -10.76 & -6.78 \\
-		$\beta_2$   & -15.34 & -11.77 \\
-		$\beta_3$   & 2.26   & 6.37 \\
-		$\beta_4$   & -3.16  & 2.65 \\
-		$\beta_5$   & -15.20 & -11.53 \\
-		$\beta_6$   & -1.34  & 2.59 \\
-		$\beta_7$   & -6.14  & 0.22 \\
-		$\beta_8$   & -11.16 & -6.55 \\
-		$\beta_9$   & -8.58  & -4.57 \\
-		$\beta_{10}$ & -4.01  & 0.23 \\
-		$\beta_{11}$ & -0.78  & 6.61 \\
-		$\beta_{12}$ & -4.05  & 0.64 \\
-		$\beta_{13}$ & -0.31  & 3.62 \\
-		$\beta_{14}$ & -5.65  & 0.02 \\
-		$\beta_{15}$ & 0.86   & 4.81 \\
-		$\beta_{16}$ & 0.19   & 6.30 \\
-		$\beta_{17}$ & -8.02  & 0.93 \\
-		\hline
-	\end{tabular}
-	\caption{Intervalli di confidenza al 95\% per i coefficienti del modello}
+	\begin{minipage}{0.48\linewidth}
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\textbf{Parametro} & \textbf{L.B.} & \textbf{U.B.} \\
+			\hline
+			$\beta_0$   & 77.29  & 85.99 \\
+			$\beta_1$   & -10.76 & -6.78 \\
+			$\beta_2$   & -15.34 & -11.77 \\
+			$\beta_3$   & 2.26   & 6.37 \\
+			$\beta_4$   & -3.16  & 2.65 \\
+			$\beta_5$   & -15.20 & -11.53 \\
+			$\beta_6$   & -1.34  & 2.59 \\
+			$\beta_7$   & -6.14  & 0.22 \\
+			$\beta_8$   & -11.16 & -6.55 \\
+			\hline
+		\end{tabular}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.48\linewidth}
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\textbf{Parametro} & \textbf{L.B.} & \textbf{U.B.} \\
+			\hline
+			
+			$\beta_9$   & -8.58  & -4.57 \\
+			$\beta_{10}$ & -4.01  & 0.23 \\
+			$\beta_{11}$ & -0.78  & 6.61 \\
+			$\beta_{12}$ & -4.05  & 0.64 \\
+			$\beta_{13}$ & -0.31  & 3.62 \\
+			$\beta_{14}$ & -5.65  & 0.02 \\
+			$\beta_{15}$ & 0.86   & 4.81 \\
+			$\beta_{16}$ & 0.19   & 6.30 \\
+			$\beta_{17}$ & -8.02  & 0.93 \\
+			\hline
+		\end{tabular}
+	\end{minipage}
+	\caption{Intervalli di confidenza al 95\% per i coefficienti del modello (suddivisi in due tabelle)}
 	\label{tab:ci_coefficienti}
 \end{table}
 I valori dell'adjusted $R^2$  e AIC ottenuti sono:

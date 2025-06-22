@@ -1,41 +1,40 @@
-\section{Descrizione del dataset fornito}
-A completezza del progetto si riporta la descrizione del dataset da analizzare. Il dataset contiene $n=100$ osservazioni, costituite da:
+\section{Introduzione}
 
-\subsection*{Variabile dipendente}
+\subsection{Descrizione del progetto}
+Il progetto si propone di sviluppare un modello di regressione lineare multipla per analizzare la qualità percepita dei video in funzione di diverse caratteristiche tecniche.  
+L'obiettivo è comprendere come tali caratteristiche influenzino il giudizio soggettivo degli utenti, espresso tramite un punteggio assegnato ai contenuti audiovisivi.
+
+\subsection{Descrizione del dataset}
+Il dataset considerato è costituito da $n = 100$ osservazioni, ciascuna delle quali rappresenta un video valutato da un gruppo di volontari. Le variabili presenti nel dataset si suddividono in:
+
+\subsubsection*{Variabile dipendente (target)}
 \textbf{y\_VideoQuality} \quad $\rightarrow$ \quad Qualità percepita del video
 
-Tale indice è immaginato come frutto di una opportuna trasformazione di un punteggio assegnato a un campione di immagini da volontari che compilano un questionario. Esso sarà funzione di diverse caratteristiche proprie dei video, tra cui:
+\noindent Questo indice è ottenuto da un'opportuna trasformazione dei punteggi soggettivi raccolti tramite questionari. Esso tiene conto di fattori percettivi quali:
 
 \begin{itemize}
-	\item la presenza o meno di rumore;
-	\item la presenza o meno di \textit{motion blur};
-	\item la nitidezza;
-	\item la profondità di campo;
-	\item la risoluzione;
-	\item le aberrazioni ottiche visibili;
-	\item la gamma dinamica;
-	\item la fedeltà cromatica.
+    \item presenza di rumore;
+    \item presenza di \textit{motion blur};
+    \item nitidezza;
+    \item profondità di campo;
+    \item risoluzione;
+    \item aberrazioni ottiche visibili;
+    \item gamma dinamica;
+    \item fedeltà cromatica.
 \end{itemize}
 
-\subsection*{Variabili indipendenti (regressori)}
+\subsubsection*{Variabili indipendenti (regressori)}
 
-Sono delle quantità di cui l’operatore ha il controllo (parziale o totale) selezionando:
+Le variabili esplicative sono costituite da indici standardizzati relativi ai parametri di acquisizione, controllabili in fase di ripresa attraverso la scelta dell'attrezzatura e delle impostazioni operative. Le variabili considerate sono:
 
 \begin{itemize}
-	\item l’attrezzatura video da utilizzare;
-	\item i parametri di ripresa.
+    \item \textbf{x1\_ISO} \quad $\rightarrow$ \quad Sensibilità ISO del sensore
+    \item \textbf{x2\_FRatio} \quad $\rightarrow$ \quad Rapporto focale
+    \item \textbf{x3\_Time} \quad $\rightarrow$ \quad Tempo di esposizione (relativo al frame rate)
+    \item \textbf{x4\_MP} \quad $\rightarrow$ \quad Numero di megapixel del sensore
+    \item \textbf{x5\_CROP} \quad $\rightarrow$ \quad Fattore di crop
+    \item \textbf{x6\_FOCAL} \quad $\rightarrow$ \quad Lunghezza focale
+    \item \textbf{x7\_PixDensity} \quad $\rightarrow$ \quad Densità di pixel
 \end{itemize}
 
-Rappresentano indici standardizzati:
-
-\begin{itemize}
-	\item \texttt{x1\_ISO} \quad $\rightarrow$ \quad ISO (sensibilità del sensore)
-	\item \texttt{x2\_FRatio} \quad $\rightarrow$ \quad Rapporto Focale
-	\item \texttt{x3\_Time} \quad $\rightarrow$ \quad Tempo di Esposizione (in relazione al frame rate utilizzato)
-	\item \texttt{x4\_MP} \quad $\rightarrow$ \quad Megapixel del sensore
-	\item \texttt{x5\_CROP} \quad $\rightarrow$ \quad Fattore di Crop
-	\item \texttt{x6\_FOCAL} \quad $\rightarrow$ \quad Focale
-	\item \texttt{x7\_PixDensity} \quad $\rightarrow$ \quad Densità di pixel
-\end{itemize}
-
-
+\noindent Nei capitoli seguenti verrà illustrato il processo di modellazione statistica adottato, includendo le fasi di analisi descrittiva, costruzione dei modelli, valutazione comparativa e diagnostica.

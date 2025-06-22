@@ -6,13 +6,11 @@
 \usepackage{graphicx}
 \usepackage[italian]{babel}
 \usepackage{geometry}
-\usepackage{amsmath} 
-\usepackage{float}
 \usepackage{eso-pic} % Per aggiungere il logo come sfondo
 \usepackage{transparent} % Per gestire la trasparenza
 \usepackage[hyperindex, bookmarks=true, colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
-\usepackage{subfigure} % per inserire due immagini affiancate o per raggruppare in un unico blocco più immagini
-
+\usepackage{amsmath}
+\usepackage{float}
 
 % Margini della pagina
 \geometry{a4paper, margin=2.5cm}
@@ -24,7 +22,7 @@
             \hspace{-3cm}
             \vspace{-4cm}
             \transparent{0.08}
-            \includegraphics[width=12cm, keepaspectratio]{_assets/logo-universita-bn.png}
+            \includegraphics[width=12cm, keepaspectratio]{logo-universita-bn.png}
         }
     }
 }
@@ -39,8 +37,8 @@
     \centering
 
     \begin{tabular}{@{}c@{\hspace{0.5cm}}c@{}}
-        
-        \raisebox{-.5\height}{\includegraphics[width=4cm]{_assets/logo-dipartimento.png}} \\
+        \raisebox{-.5\height}{\includegraphics[width=4cm]{logo-universita.png}} & 
+        \raisebox{-.5\height}{\includegraphics[width=4cm]{logo-dipartimento.png}} \\
     \end{tabular}\\[1cm]
     
     {\LARGE Università degli Studi di Salerno}\\[0.5cm]
@@ -49,7 +47,7 @@
     {\Large \textbf{Sviluppo di un modello di regressione lineare su dataset}}\\[1cm]
     {\Large Corso di Statistica Applicata - A.A. 2024/25}\\[2cm]
     \begin{flushright}
-        \textbf{Studenti Gruppo 16:}\\[0.2cm]
+        \textbf{Studenti Gruppo 5:}\\[0.2cm]
         Corradomaria Giachetta \\
         Matricola: 0612708054 \\
         Francesco Peluso \\
@@ -69,15 +67,14 @@
 % Indice
 \tableofcontents
 \newpage
-\input{DescrizioneDataset}
+\input{_assets/DescrizioneDataset}
 \newpage
-\input{statisticaDescrittiva.tex}
+\input{_assets/StatisticaDescrittiva}
 \newpage
-\input{Analisivariabili}
+\input{_assets/AnalisiVariabili}
 \newpage
-\input{AnalisiModelli}
+\input{_assets/AnalisiModelli}
 \newpage
-\input{SceltaModello}
-
+\input{_assets/SceltaModello}
 
 \end{document}

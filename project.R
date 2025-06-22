@@ -251,7 +251,7 @@ summary(model_full)
 
 # Creiamo ora un modello ridotto, includendo solo le variabili significative
 model_reduced <- lm(y_VideoQuality ~ x1_ISO + x2_FRatio + x3_TIME + x5_CROP, data=data)
-summary(model_reduced)
+summary(model_reduced) #Modello 1
 
 # Tutti i regressori restano altamente significativi.
 # R^2 e Adj. R^2 sono molto simili al modello completo, quindi il modello è più
@@ -259,12 +259,14 @@ summary(model_reduced)
 
 # Dalle analisi precedenti è emersa una possibile non linearità in alcune variabili.
 # Aggiungiamo quindi termini quadratici per migliorare l'adattamento.
+
+
 model_quad <- lm(y_VideoQuality ~ 
                    x1_ISO + I(x1_ISO^2) +
                    x2_FRatio + I(x2_FRatio^2) +
                    x3_TIME + x5_CROP,
                  data = data)
-summary(model_quad)
+summary(model_quad) #Modello 2
 
 # I termini quadratici migliorano il modello: R^2 e Adj. R^2 aumentano,
 # il residuo standard diminuisce e i coefficienti sono tutti altamente significativi.
@@ -301,7 +303,7 @@ model_step_interactions <- lm(y_VideoQuality ~ (.)^2 +
                                 I(x4_MP^2)+I(x5_CROP^2)+I(x6_FOCAL^2)+I(x7_PixDensity^2), 
                               data = data)
 model_step_interactions <- step(model_step_interactions, k = 2)
-summary(model_step_interactions)
+summary(model_step_interactions) #Modello 3
 extractAIC(model_step_interactions) # AIC = 448.2659
 mse_step_interactions = mean(residuals(model_step_interactions)^2); print(mse_step_interactions); # MSE = 61.72313
 
@@ -318,7 +320,7 @@ model_step_interactions_reduced <- lm(
   data = data[, !names(data) %in% c("x4_MP", "x6_FOCAL")]
 )
 model_step_interactions_reduced <- step(model_step_interactions_reduced, k = 2)
-summary(model_step_interactions_reduced)
+summary(model_step_interactions_reduced) #Modello 4
 extractAIC(model_step_interactions_reduced)
 mse_step_interactions_rdcd = mean(residuals(model_step_interactions_reduced)^2); print(mse_step_interactions_rdcd);
 
@@ -344,7 +346,7 @@ model_cubic <- lm(
   data = data
 )
 model_cubic_step <- step(model_cubic, k = 2)
-summary(model_cubic_step)
+summary(model_cubic_step) #Modello 5
 extractAIC(model_cubic_step)
 mse_step_cubic = mean(residuals(model_cubic_step)^2); print(mse_step_cubic);
 
@@ -367,7 +369,7 @@ par(mfrow=c(2,2))
 plot(model_full, main = "Diagnostica - Modello completo")
 dev.print(device=pdf,"diag_model_full.pdf")
 
-# Modello ridotto
+# Modello ridotto (Modello 1)
 summary(model_reduced)
 confint(model_reduced, level = 0.95)
 confint(model_reduced, level = 0.90)
@@ -376,7 +378,7 @@ par(mfrow=c(2,2))
 plot(model_reduced, main = "Diagnostica - Modello ridotto")
 dev.print(device=pdf,"diag_model_reduced.pdf")
 
-# Modello quadratico
+# Modello quadratico (Modello 2)
 summary(model_quad)
 confint(model_quad, level = 0.95)
 confint(model_quad, level = 0.90)
@@ -394,7 +396,7 @@ par(mfrow=c(2,2))
 plot(model_stepwise, main = "Diagnostica - Modello stepwise")
 dev.print(device=pdf,"diag_model_stepwise.pdf")
 
-# Modello con interazioni
+# Modello con interazioni (Modello 3)
 summary(model_step_interactions)
 confint(model_step_interactions, level = 0.95)
 confint(model_step_interactions, level = 0.90)
@@ -403,7 +405,7 @@ par(mfrow=c(2,2))
 plot(model_step_interactions, main = "Diagnostica - Modello interazioni")
 dev.print(device=pdf,"diag_model_step_interactions.pdf")
 
-# Modello cubico (finale)
+# Modello cubico (Modello 5- finale)
 summary(model_cubic_step)
 confint(model_cubic_step, level = 0.95)
 confint(model_cubic_step, level = 0.90)

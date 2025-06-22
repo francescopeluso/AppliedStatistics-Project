@@ -14,6 +14,8 @@ Si riportano i valori di $R^2$ e AIC dei quattro modelli.
 	\end{tabular}
 	\caption{Valori di $R^2$ e AIC per i quattro modelli}
 \end{table}
+\textbf{Osservazione.} È opportuno considerare che, nella scelta del modello, si è tenuto conto dell’elevata correlazione lineare osservata tra alcune variabili predittive, in particolare tra \textbf{x4\_MP} e \textbf{x7\_PixDensity} (correlazione pari a 0.743). \\ 
+   Un’alta correlazione tra predittori può infatti dar luogo a fenomeni di \emph{multicollinearità}, ossia a situazioni in cui alcune variabili esplicative risultano linearmente dipendenti o quasi dipendenti. Ciò comporta una riduzione del rango della matrice del disegno (\emph{design matrix}), con conseguenti stime instabili dei coefficienti, varianze elevate e difficoltà nell’interpretazione individuale degli effetti delle singole variabili.
 Di seguito vengono mostrati i grafici diagnostici ottenuti sui quattro modelli.
 \begin{figure}[H]
 	\centering
